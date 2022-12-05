@@ -19,31 +19,19 @@ if ($mysqli->connect_error) {
     $mysqli->connect_error);
 }
 
-$sql = " SELECT * FROM country ";
-$country_query = mysqli_query($mysqli, $sql);
-            $country = mysqli_fetch_array($country_query);
-// SQL query to select data from database
-// $sql = " SELECT * FROM country ";
-// $result = $mysqli->query($sql);
+$sql = " SELECT * FROM product ";
+$query = mysqli_query($mysqli, $sql);
+            $prod = mysqli_fetch_array($query);
 
-// $country_query = mysqli_query($mysqli, $sql);
+$myvariable = 0;
+$prod_name = [];
+while($prod_row = mysqli_fetch_array($query)){
+    $prod_name[$myvariable] = $prod_row['prod name'];
+    echo $prod_name[$myvariable];
+    echo"\r\n";
+    $myvariable = $myvariable + 1;
 
-// <table>
-//     <tr>
-//         <td>name</td>
-//     <tr>
-
-    while($country_row = mysqli_fetch_array($country_query)){
-        echo $country_row['name'];
-        echo"\r\n";
-
-    }
-//echo $country['name'];
-// while(rs.next())
-// {
-//     String name = rs.getString("name");
-//     countries.add(new Country(name));
-// }
+}
     
 $mysqli->close();
 ?>
