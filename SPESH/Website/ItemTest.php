@@ -21,7 +21,7 @@
 
     $sql = " SELECT * FROM country ";
     $country_query = mysqli_query($mysqli, $sql);
-                $country = mysqli_fetch_array($country_query);
+     $country = mysqli_fetch_array($country_query);
     // SQL query to select data from database
     // $sql = " SELECT * FROM country ";
     // $result = $mysqli->query($sql);
@@ -38,11 +38,12 @@
             echo"\r\n";
 
         }
+        $sql = " SELECT name FROM country WHERE name = 'China'";
+        $chinaquery = mysqli_query($mysqli, $sql);
+        $china = mysqli_fetch_array($chinaquery);
 
-    
-    $var1 = "thisthitishith";
     session_start();
-    $_SESSION['test'] = $var1
+    $_SESSION['test'] = $china[0];
     
     
     //echo $country['name'];
@@ -54,5 +55,5 @@
         
     $mysqli->close();
 ?>
-
-<a href="ItemPage.php"><button style = "background-color:#F6F6F6; width:200px; height:60px">Countries </button></a>
+<title>TEST</title>
+<a href="ExplorePage.php"><button style = "background-color:#F6F6F6; width:200px; height:60px"> View Items </button></a>
