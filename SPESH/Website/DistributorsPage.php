@@ -67,8 +67,12 @@
     <p>basket.champ@yahoo.com</p>
     <p>587 829 1920</p>
     <img src="https://fotografias.antena3.com/clipping/cmsimages01/2018/10/18/226A74E0-C67D-40BA-BD22-9EE8E9909F51/69.jpg?crop=1:1,smart&width=1200&height=1200&optimize=low&format=webply" width="150" height ="150" class="center"{margin-right: 30%}>
-    <a href="HomePage.php"><input type="button" value="Contact" style="float: left;"></a>
+    <a href="basket.champ@yahoo.com"><input type="button" value="Contact" style="float: left;"></a>
   </div>
 </div>
+<br></br>
+<br></br>
+<a href="Login.php"><input type="button" value="Back" style="float: left;"></a>
+		
 </body>
 </html>
