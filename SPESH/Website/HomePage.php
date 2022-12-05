@@ -33,7 +33,7 @@ body {
 		<p> </p>
 		<p> </p>
 		<p> </p>
-		<img style = align:center; src="https://www.pngkey.com/png/full/8-87499_image-download-design-watercolour-flowers-painting-hd-watercolor.png" width="200" height ="40" style="width:10px">
+		<img style = align:center; src="https://www.pngkey.com/png/full/8-87499_image-download-design-watercolour-flowers-painting-hd-watercolor.png" width="600" height ="600" {margin-right: 20%}>
 		<p> </p>
 		
 		
