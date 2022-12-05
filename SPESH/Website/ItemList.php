@@ -1,58 +1,110 @@
-<?php
- 
-    // Username is root
-    $user = 'root';
-    $password = '';
-    
-    $database = 'speshdb';
-    
-    // Server is localhost with
-    // port number 3306
-    $servername='localhost:3306';
-    $mysqli = new mysqli($servername, $user,
-                    $password, $database);
-    
-    // Checking for connections
-    if ($mysqli->connect_error) {
-        die('Connect Error (' .
-        $mysqli->connect_errno . ') '.
-        $mysqli->connect_error);
-    }
+<!DOCTYPE html>
 
-    $sql = " SELECT * FROM country ";
-    $country_query = mysqli_query($mysqli, $sql);
-                $country = mysqli_fetch_array($country_query);
-    // SQL query to select data from database
-    // $sql = " SELECT * FROM country ";
-    // $result = $mysqli->query($sql);
+<html lang="en">
+<head>
 
-    // $country_query = mysqli_query($mysqli, $sql);
+</head>
+	<body>
+        <!-- <?php
+            session_start();
+            echo $_SESSION['test'];
 
-    // <table>
-    //     <tr>
-    //         <td>name</td>
-    //     <tr>
-
-        while($country_row = mysqli_fetch_array($country_query)){
-            echo $country_row['name'];
-            echo"\r\n";
-
-        }
-
-    
-    $var1 = "thisthitishith";
-    session_start();
-    $_SESSION['test'] = $var1
-    
-    
-    //echo $country['name'];
-    // while(rs.next())
-    // {
-    //     String name = rs.getString("name");
-    //     countries.add(new Country(name));
-    // }
+        ?> -->
+        <title>Item</title>
+            <h1 style="color: #6D4F60; font-size:60px; text-align:center;">SPESH Market! </h1>
+		
+        <style>
         
-    $mysqli->close();
-?>
+        .adjust-line-height {
+            line-height: 1em;
+        }
+        </style>
 
-<a href="ItemPage.php"><button style = "background-color:#F6F6F6; width:200px; height:60px">Countries </button></a>
+		<p style = "color: #6A475A;position:relative; font-size:30px; left: 300px; top: 90px;" class = "adjust-line-height"> 
+            <strong> Item Name </strong>
+        </p>
+        <img src = "https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?cs=srgb&dl=pexels-ash-376464.jpg&fm=jpg" 
+            style = "width:200px; position:relative; left:60px; top: 30px;">
+        <b> </b>
+        <b> </b>
+
+		<div style = "color: #6A475A; position:relative; font-size:18px; left:300px; top: -70px;" 
+            class = "adjust-line-height"> 
+            <p> Item Description 
+                <br>
+                More info.
+            </p>
+        </div>
+	
+        <a href="AddToCart.php">
+            <button style = "background-color:#F6F6F6; width:200px; height:30px; font-size:16px; position:relative; left:554px; top: -150px;">
+                Add to Cart 
+            </button>
+        </a>
+        <a href="AddToWishlist.php">
+            <button style = "background-color:#F6F6F6; width:200px; height:30px; font-size:16px; position:relative; left:350px; top: -110px;">
+                Add to Wishlist 
+            </button>
+        </a>
+
+
+
+        <p style = "color: #6A475A;position:relative; font-size:30px; left: 300px; top: 90px;" class = "adjust-line-height"> 
+            <strong> Item Name </strong>
+        </p>
+        <img src = "https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?cs=srgb&dl=pexels-ash-376464.jpg&fm=jpg" 
+            style = "width:200px; position:relative; left:60px; top: 30px;">
+        <b> </b>
+        <b> </b>
+
+		<div style = "color: #6A475A; position:relative; font-size:18px; left:300px; top: -70px;" 
+            class = "adjust-line-height"> 
+            <p> Item Description 
+                <br>
+                More info.
+            </p>
+        </div>
+	
+        <a href="AddToCart.php">
+            <button style = "background-color:#F6F6F6; width:200px; height:30px; font-size:16px; position:relative; left:554px; top: -150px;">
+                Add to Cart 
+            </button>
+        </a>
+        <a href="AddToWishlist.php">
+            <button style = "background-color:#F6F6F6; width:200px; height:30px; font-size:16px; position:relative; left:350px; top: -110px;">
+                Add to Wishlist 
+            </button>
+        </a>
+
+
+
+        <p style = "color: #6A475A;position:relative; font-size:30px; left: 300px; top: 90px;" class = "adjust-line-height"> 
+            <strong> Item Name </strong>
+        </p>
+        <img src = "https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?cs=srgb&dl=pexels-ash-376464.jpg&fm=jpg" 
+            style = "width:200px; position:relative; left:60px; top: 30px;">
+        <b> </b>
+        <b> </b>
+
+		<div style = "color: #6A475A; position:relative; font-size:18px; left:300px; top: -70px;" 
+            class = "adjust-line-height"> 
+            <p> Item Description 
+                <br>
+                More info.
+            </p>
+        </div>
+	
+        <a href="AddToCart.php">
+            <button style = "background-color:#F6F6F6; width:200px; height:30px; font-size:16px; position:relative; left:554px; top: -150px;">
+                Add to Cart 
+            </button>
+        </a>
+        <a href="AddToWishlist.php">
+            <button style = "background-color:#F6F6F6; width:200px; height:30px; font-size:16px; position:relative; left:350px; top: -110px;">
+                Add to Wishlist 
+            </button>
+        </a>
+	
+
+	</body>
+</html>
