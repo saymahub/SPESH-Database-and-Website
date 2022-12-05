@@ -31,58 +31,58 @@
   </head>
   <body style="background-color:#DBCCD4">
   
-  <div class="center">
+    <div class="center">
   	<p style = "text-align:center; font-size:30px;" > <strong>Sign Up</strong><p>
-    <form action="/form/submit" method="post">
-      <div>
-        <label>Username:</label>
-        <input type="text" />
-      </div>
-      <div>
-        <label>Email:</label>
-        <input type="text" />
-      </div>
-      <div>
-        <label>Card Number:</label>
-        <input type="text" />
-      </div>
-      <div>
-        <label>CVV:</label>
-        <input type="text" />
-      </div>
-      <div>
-        <label>Expiration Date:</label>
-        <input type="text" />
-      </div>
-      <div>
-        <label>Country:</label>
-        <input type="text" />
-      </div>
-      <div>
-        <label>Province:</label>
-        <input type="text" />
-      </div>
-      <div>
-        <label>City:</label>
-        <input type="text" />
-      </div>
-      <div>
-        <label>Address:</label>
-        <input type="text" />
-      </div>
-       <div>
-      <label>Postal Code:</label>
-        <input type="text" />
-      </div>
-      <div>
-        <label>Password: </label>
-        <input type="password" />
-        <input type="submit" value="Sign Up" />
-      </div>
-    </form>
+        <form action="/form/submit" method="post">
+            <div>
+                <label>Username:</label>
+                <input type="text" />
+            </div>
+            <div>
+                <label>Email:</label>
+                <input type="text" />
+            </div>
+            <div>
+                <label>Card Number:</label>
+                <input type="text" />
+            </div>
+            <div>
+                <label>CVV:</label>
+                <input type="text" />
+            </div>
+            <div>
+                <label>Expiration Date:</label>
+                <input type="text" />
+            </div>
+            <div>
+                <label>Country:</label>
+                <input type="text" />
+            </div>
+            <div>
+                <label>Province:</label>
+                <input type="text" />
+            </div>
+            <div>
+                <label>City:</label>
+                <input type="text" />
+            </div>
+            <div>
+                <label>Address:</label>
+                <input type="text" />
+            </div>
+            <div>
+            <label>Postal Code:</label>
+                <input type="text" />
+            </div>
+            <div>
+                <label>Password: </label>
+                <input type="password" />
+                <input type="submit" value="Sign Up" />
+            </div>
+        </form>
     
  
-</div>
+    </div>
   </body>
 </html>
 
