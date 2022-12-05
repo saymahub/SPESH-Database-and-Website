@@ -74,7 +74,7 @@ INSERT INTO `product` (`id`, `country`, `category`, `prod name`, `price`) VALUES
 (14, 'Dominican Republic', 'food', 'pizza', '$10.00'),
 (15, 'China', 'food', 'mixed veggies', '$10.00'),
 (16, 'Bulgaria', 'food', 'instant noodles', '$10.00'),
-(17, 'Bulgaria', 'food', 'the entie collection of shakespeares work', '$10.00'),
+(17, 'Bulgaria', 'food', 'the entire collection of shakespeares work', '$10.00'),
 (18, 'Afghanistan', 'food', 'burger', '$10.00'),
 (19, 'China', 'food', 'peas', '$10.00'),
 (20, 'England', 'food', 'coca cola', '$10.00');
