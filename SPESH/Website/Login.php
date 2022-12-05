@@ -2,56 +2,56 @@
 <html>
 <head>
 <style> 
-body {
-	height: 100%;
-    margin: 0;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-	background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fstock.adobe.com%2Fsearch%2Fimages%3Fk%3Dpastel%2Bpink%2Bwhite%2Bbackgrounds&psig=AOvVaw0cYMKv7DKB2JAFUDCDF4gT&ust=1670289119178000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCOio1f6l4fsCFQAAAAAdAAAAABAE");
-	background-image: linear-gradient(#9E7E88, #FFFFFF);
-}
+	body {
+		height: 100%;
+		margin: 0;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fstock.adobe.com%2Fsearch%2Fimages%3Fk%3Dpastel%2Bpink%2Bwhite%2Bbackgrounds&psig=AOvVaw0cYMKv7DKB2JAFUDCDF4gT&ust=1670289119178000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCOio1f6l4fsCFQAAAAAdAAAAABAE");
+		background-image: linear-gradient(#9E7E88, #FFFFFF);
+	}
 
-*{
-  box-sizing: border-box;
-}
+	*{
+	box-sizing: border-box;
+	}
 
-/* Create two equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 50%;
-  padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
-}
+	/* Create two equal columns that floats next to each other */
+	.column {
+	float: left;
+	width: 50%;
+	padding: 10px;
+	height: 300px; /* Should be removed. Only for demonstration */
+	}
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+	/* Clear floats after the columns */
+	.row:after {
+	content: "";
+	display: table;
+	clear: both;
+	}
 
-.container {
-height: 200px;
-position: relative;
-}
+	.container {
+	height: 200px;
+	position: relative;
+	}
 
-.center {
-margin: 0;
-position: absolute;
-top: 50%;
-left: 50%;
--ms-transform: translate(-50%, -50%);
-transform: translate(-50%, -50%);
-}
+	.center {
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	}
 
-div {
-margin-bottom: 10px;
-}
-label {
-display: inline-block;
-width: 150px;
-text-align: right;
-}
+	div {
+	margin-bottom: 10px;
+	}
+	label {
+	display: inline-block;
+	width: 150px;
+	text-align: right;
+	}
 </style> 
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
