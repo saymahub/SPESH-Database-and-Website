@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Search By Category</title>
 </head>
 <body style="background-color:#DBCCD4">
 <form name="loginForm" method="post" action="SearchCountry">

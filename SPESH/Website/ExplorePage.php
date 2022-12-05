@@ -28,7 +28,7 @@
 
 </style>
 </head>
-	
+  <title>Explore</title>
 	<body>
 		<h1 style="color: #451C29; font-size:60px; text-align:center;">SPESH Market! </h1>
 		<p style = "text-align:center; font-size:20px;"> Explore the multitude of products SPESH has to offer!</p>

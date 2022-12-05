@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>SPESH! 
-    <body>
-    <title>Item</title>
+    <title>Checkout</title>
 		<h1 style="color: #451C29; font-size:60px; text-align:center;">SPESH Market! </h1>
-		
+
     <style>
       body {
         height: 100%;
@@ -18,6 +16,7 @@
       .container {
         height: 200px;
       position: relative;
+<<<<<<< HEAD
       }
 
       .center {
@@ -57,6 +56,48 @@
       }
   </style>
 </head>
+=======
+      }
+
+      .center {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+      }
+
+        div {
+          margin-bottom: 10px;
+        }
+        label {
+          display: inline-block;
+          width: 150px;
+          text-align: right;
+        }/* width */
+          ::-webkit-scrollbar {
+          width: 10px;
+          }
+
+          /* Track */
+          ::-webkit-scrollbar-track {
+          background: #f1f1f1; 
+          }
+          
+          /* Handle */
+          ::-webkit-scrollbar-thumb {
+          background: #888; 
+          }
+
+          /* Handle on hover */
+          ::-webkit-scrollbar-thumb:hover {
+          background: #555; 
+          }
+    </style>
+
+  </head>
+>>>>>>> b811ba6d97a57274e42aea8dd57f0c0e7227231e
   <body>   
     <div class="west">
   	<p style = "color: #451C29; text-align:center; font-size:30px;" > <strong>Payment and Shipping</strong><p>

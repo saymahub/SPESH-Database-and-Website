@@ -56,5 +56,5 @@
         
     $mysqli->close();
 ?>
-
+<title>TEST</title>
 <a href="ItemList.php"><button style = "background-color:#F6F6F6; width:200px; height:60px"> View Items </button></a>

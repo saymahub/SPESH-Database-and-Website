@@ -10,7 +10,7 @@
             echo $_SESSION['test'];
 
         ?> -->
-        <title>Item</title>
+        <title>Items</title>
             <h1 style="color: #6D4F60; font-size:60px; text-align:center;">SPESH Market! </h1>
 		
         <style>

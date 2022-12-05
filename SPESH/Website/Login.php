@@ -54,7 +54,7 @@
 	}
 </style> 
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Login Page</title>
 </head>
 
 <body style="background-color:#DBCCD4">

@@ -29,7 +29,7 @@
 
 </style>
 </head>
-	
+	<title>Home Page</title>
 	<body>
 	<img style = align:center; src="https://www.pngmart.com/files/21/Aesthetic-Flowers-Transparent-PNG.png" width="800" height ="800" class="center"{margin-right: 30%}>
 		
