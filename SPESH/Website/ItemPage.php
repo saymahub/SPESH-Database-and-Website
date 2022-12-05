@@ -32,9 +32,18 @@
                 More info.
             </p>
         </div>
-		
-		
-		
+		<div>
+        <a href="AddToCart.php">
+            <button style = "background-color:#F6F6F6; width:200px; height:50px; font-size:18px; position:relative; left:60px; top: 30px;">
+                Add to Cart 
+            </button>
+        </a>
+        <a href="AddToWishlist.php">
+            <button style = "background-color:#F6F6F6; width:200px; height:50px; font-size:18px; position:relative; left:100px; top: 30px;">
+                Add to Wishlist 
+            </button>
+        </a>
+		</div>
 		
 	</body>
 </html>
