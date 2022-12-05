@@ -9,7 +9,7 @@
 		background-repeat: no-repeat;
 		background-attachment: fixed;
 		background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fstock.adobe.com%2Fsearch%2Fimages%3Fk%3Dpastel%2Bpink%2Bwhite%2Bbackgrounds&psig=AOvVaw0cYMKv7DKB2JAFUDCDF4gT&ust=1670289119178000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCOio1f6l4fsCFQAAAAAdAAAAABAE");
-		background-image: linear-gradient(#9E7E88, #FFFFFF);
+		background-image: linear-gradient(#FFFFFF, #9E7E88);
 	}
 	/*  E0D1D9*/
 
