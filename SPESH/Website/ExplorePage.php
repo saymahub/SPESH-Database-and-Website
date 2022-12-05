@@ -134,8 +134,5 @@
 	
         <a href="Login.php"><input type="button" value="Back" style="float: left;"></a>
 		
-	
-		
-
 	</body>
 </html>
