@@ -48,6 +48,28 @@
         </style>
 
 		<p style = "color: #6A475A;position:relative; font-size:30px; left: 300px; top: 90px;" class = "adjust-line-height"> 
+            <strong> Pancake </strong>
+        </p>
+        <img src = "https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?cs=srgb&dl=pexels-ash-376464.jpg&fm=jpg" 
+            style = "width:200px; position:relative; left:60px; top: 30px;">
+        <b> </b>
+        <b> </b>
+
+		<div style = "color: #6A475A; position:relative; font-size:18px; left:300px; top: -70px;" 
+            class = "adjust-line-height"> 
+            <p> Yummy 
+                <br>
+                Yummy
+            </p>
+        </div>
+	
+        <a href="Cart.php">
+            <a href="Login.php"><button style = "background-color:#F6F6F6; width:200px; height:30px; font-size:16px; position:relative; left:554px; top: -150px;">
+                Add to Cart 
+            </button>
+        </a>
+
+        <p style = "color: #6A475A;position:relative; font-size:30px; left: 300px; top: 90px;" class = "adjust-line-height"> 
             <strong> Item Name </strong>
         </p>
         <img src = "https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?cs=srgb&dl=pexels-ash-376464.jpg&fm=jpg" 
@@ -63,7 +85,7 @@
             </p>
         </div>
 	
-        <a href="AddToCart.php">
+        <a href="Cart.php">
             <button style = "background-color:#F6F6F6; width:200px; height:30px; font-size:16px; position:relative; left:554px; top: -150px;">
                 Add to Cart 
             </button>
@@ -85,7 +107,7 @@
             </p>
         </div>
 	
-        <a href="AddToCart.php">
+        <a href="Cart.php">
             <button style = "background-color:#F6F6F6; width:200px; height:30px; font-size:16px; position:relative; left:554px; top: -150px;">
                 Add to Cart 
             </button>
@@ -107,29 +129,7 @@
             </p>
         </div>
 	
-        <a href="AddToCart.php">
-            <button style = "background-color:#F6F6F6; width:200px; height:30px; font-size:16px; position:relative; left:554px; top: -150px;">
-                Add to Cart 
-            </button>
-        </a>
-
-        <p style = "color: #6A475A;position:relative; font-size:30px; left: 300px; top: 90px;" class = "adjust-line-height"> 
-            <strong> Item Name </strong>
-        </p>
-        <img src = "https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?cs=srgb&dl=pexels-ash-376464.jpg&fm=jpg" 
-            style = "width:200px; position:relative; left:60px; top: 30px;">
-        <b> </b>
-        <b> </b>
-
-		<div style = "color: #6A475A; position:relative; font-size:18px; left:300px; top: -70px;" 
-            class = "adjust-line-height"> 
-            <p> Item Description 
-                <br>
-                More info.
-            </p>
-        </div>
-	
-        <a href="AddToCart.php">
+        <a href="Cart.php">
             <button style = "background-color:#F6F6F6; width:200px; height:30px; font-size:16px; position:relative; left:554px; top: -150px;">
                 Add to Cart 
             </button>
