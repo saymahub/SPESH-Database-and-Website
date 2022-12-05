@@ -64,30 +64,34 @@
   <body>   
     <div class="west">
   	<p style = "color: #451C29; text-align:center; font-size:30px;" > <strong>Payment and Shipping</strong><p>
-        <form action="CheckoutPage.php" method="post">
+        <html>
+        <head>
+        <script>
+        function myFunction() {
+            var r = confirm("Please confirm your cart or cancel your order.");
+            document.getElementById("demo").innerHTML;
+        }
+        </script>
+        </head>
+        <body>
+        <?php
+        ?>
+        <button onclick="myFunction()">Confirm Cart</button>
+        <p id="demo"></p>
+        </body>
+        </html>
+        
+        <?php echo " Enter differemt payment and shipping information or use default information";
+        ?>
+        <br>
+        <br>
+        <form action="#" method="post">
+            <input type="checkbox" name="default" value="Use default">Use default</input>            
+        </form>
 
-            <html>
-            <head>
-            <script>
-            function myFunction() {
-                var r = confirm("Please confirm your cart or cancel your order.");
-                document.getElementById("demo").innerHTML;
-            }
-            </script>
-            </head>
-            <body>
-            <?php
-            ?>
-            <button onclick="myFunction()">Confirm Cart</button>
-            <p id="demo"></p>
-            </body>
-            </html>
+        
+        <form action="NOTYETMADE.php" method="post">
 
-            <?php echo " Enter differemt payment and shipping information or use default information";
-           ?>
-           <br>
-           <br>
-            <input type="submit" value="Use default" />
             <br>
                 <br>
             <div>
