@@ -21,20 +21,19 @@ body {
 		
 		<p style = "color: #6A475A;text-align:center; font-size:30px;"> <strong> EXPLORE SPESH NOW </strong></p>
 		
-		<a href="SearchCountry.html"><button style = "background-color:#F6F6F6; width:200px; height:60px">Countries </button></a>
-		<a href="SearchProduct.html"><button style = "background-color:#F6F6F6; width:200px; height:60px">Products </button></a>
-		<a href="SearchCategory.html"><button style = "background-color:#F6F6F6; width:200px; height:60px">Categories </button></a>
-		
+		<a href="SearchCountry.php"><button style = "background-color:#F6F6F6; width:200px; height:60px">Countries </button></a>
+		<a href="SearchProduct.php"><button style = "background-color:#F6F6F6; width:200px; height:60px">Products </button></a>
+		<a href="SearchCategory.php"><button style = "background-color:#F6F6F6; width:200px; height:60px">Categories </button></a>
+		<a href="SignInPage.php"><button style = "background-color:#F6F6F6; width:200px; height:60px">Sign in / Register </button></a>
 		<p title="Ur ugly"style="color: #4F3142; font-family: Comic Sans MS; text-align:center;">
 		I <3 U </p>
-		<a href="Login.html"><button style = "background-color:#F6F6F6; width:200px; height:60px">Sign in / Register </button></a>
-		
+	
 		<p> </p>
 		<p> </p>
 		<p> </p>
 		<p> </p>
 		<p> </p>
-		<img style = align:center; src="https://www.pngkey.com/png/full/8-87499_image-download-design-watercolour-flowers-painting-hd-watercolor.png" style="width:10px">
+		<img style = align:center; src="https://www.pngkey.com/png/full/8-87499_image-download-design-watercolour-flowers-painting-hd-watercolor.png" width="200" height ="40" style="width:10px">
 		<p> </p>
 		
 		
