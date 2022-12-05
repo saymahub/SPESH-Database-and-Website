@@ -1,5 +1,9 @@
 <!DOCTYPE html>
+<!-- <?php
+    session_start();
+    echo $_SESSION['test'];
 
+?> -->
 <html lang="en">
 <head>
 <style> 
@@ -34,11 +38,7 @@
 		<p style = "text-align:center; font-size:20px;"> Explore the multitude of products SPESH has to offer!</p>
 		<a href="Login.php"><input type="button" value="Back" style="position:relative; font-size:12px; left: 20px; top: -170px;"></a>
 
-        <!-- <?php
-            session_start();
-            echo $_SESSION['test'];
-
-        ?> -->
+        
         <title>Item</title>
         <style>
         
