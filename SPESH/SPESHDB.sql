@@ -59,25 +59,25 @@ CREATE TABLE `product` (
 
 INSERT INTO `product` (`id`, `country`, `category`, `prod name`, `price`) VALUES
 (1, 'China', 'food', 'pancakes', '$10.00'),
-(2, 'Afghanistan', 'food', 'thyme', '$10.00'),
-(3, 'Bulgaria', 'food', 'ketchup chips', '$10.00'),
-(4, 'Dominican Republic', 'food', 'biryani', '$10.00'),
-(5, 'Afghanistan', 'food', 'macaroni salad', '$10.00'),
-(6, 'Bulgaria', 'food', 'nestea', '$10.00'),
-(7, 'Afghanistan', 'food', 'sand', '$10.00'),
-(8, 'China', 'food', 'water', '$10.00'),
-(9, 'France', 'food', 'cake', '$10.00'),
-(10, 'Bulgaria', 'food', 'cupcake', '$10.00'),
-(11, 'Dominican Republic', 'food', 'lasagna', '$10.00'),
+(2, 'Afghanistan', 'food', 'thyme', '$1.00'),
+(3, 'Bulgaria', 'food', 'ketchup chips', '$3.00'),
+(4, 'Dominican Republic', 'food', 'biryani', '$15.00'),
+(5, 'Afghanistan', 'food', 'macaroni salad', '$9.00'),
+(6, 'Bulgaria', 'food', 'nestea', '$11.00'),
+(7, 'Afghanistan', 'food', 'sand', '$32.00'),
+(8, 'China', 'food', 'water', '$2.99'),
+(9, 'France', 'food', 'cake', '$8.00'),
+(10, 'Bulgaria', 'food', 'cupcake', '$16.00'),
+(11, 'Dominican Republic', 'food', 'lasagna', '$1.50'),
 (12, 'Afghanistan', 'food', 'shrimps', '$10.00'),
-(13, 'England', 'food', 'mochi', '$10.00'),
-(14, 'Dominican Republic', 'food', 'pizza', '$10.00'),
-(15, 'China', 'food', 'mixed veggies', '$10.00'),
-(16, 'Bulgaria', 'food', 'instant noodles', '$10.00'),
-(17, 'Bulgaria', 'food', 'the entire collection of shakespeares work', '$10.00'),
-(18, 'Afghanistan', 'food', 'burger', '$10.00'),
+(13, 'England', 'food', 'mochi', '$4.50'),
+(14, 'Dominican Republic', 'food', 'pizza', '$7.25'),
+(15, 'China', 'food', 'mixed veggies', '$66.66'),
+(16, 'Bulgaria', 'food', 'instant noodles', '$0.50'),
+(17, 'Bulgaria', 'food', 'the entire collection of shakespeares work', '$100.01'),
+(18, 'Afghanistan', 'food', 'burger', '$7.89'),
 (19, 'China', 'food', 'peas', '$10.00'),
-(20, 'England', 'food', 'coca cola', '$10.00');
+(20, 'England', 'food', 'coca cola', '$3.99');
 
 
 --
