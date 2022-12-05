@@ -6,6 +6,11 @@
 </style>
 </head>
 	<body>
+        <?php
+            session_start();
+            echo $_SESSION['test'];
+            
+        ?>
     <title>Item</title>
 		<h1 style="color: #6D4F60; font-size:60px; text-align:center;">SPESH Market! </h1>
 		
@@ -44,6 +49,6 @@
             </button>
         </a>
 		</div>
-		
+
 	</body>
 </html>

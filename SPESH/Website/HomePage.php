@@ -5,10 +5,26 @@
 <style> 
 body {
   background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fstock.adobe.com%2Fsearch%2Fimages%3Fk%3Dpastel%2Bpink%2Bwhite%2Bbackgrounds&psig=AOvVaw0cYMKv7DKB2JAFUDCDF4gT&ust=1670289119178000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCOio1f6l4fsCFQAAAAAdAAAAABAE");
-  background-image: linear-gradient(#DBCCD4, #FFFFFF);
+  background-image: linear-gradient(#E0D1D9, #FFFFFF);
 }
+
+.container { 
+  height: 200px;
+  position: relative;
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
 </style>
 </head>
+	
 	<body>
 		<audio src="https://www.youtube.com/watch?v=OYvTbSU6TC0&ab_channel=WhenAllisSaid%26Done" loop autoplay ></audio>
 
@@ -16,27 +32,33 @@ body {
 		
 		
 
-		<p  style = "text-align:center; font-size:20px;"> Shop online at SPESH wherever, whenever to explore our diverse selection of international ingredients. It's never been easier to have the taste of home right at your finger tips :D</p>
+		<p style = "text-align:center; font-size:20px;"> Shop online at SPESH wherever, whenever to explore our diverse selection of international ingredients. It's never been easier to have the taste of home right at your finger tips :D</p>
 		
 		
-		<p style = "color: #6A475A;text-align:center; font-size:30px;"> <strong> EXPLORE SPESH NOW </strong></p>
+		<p style = "color: #6A475A;text-align:center; font-size:30px;"> <strong> Sign in to continue! </strong></p>
 		
-		<a href="SearchCountry.php"><button style = "background-color:#F6F6F6; width:200px; height:60px">Countries </button></a>
-		<a href="SearchProduct.php"><button style = "background-color:#F6F6F6; width:200px; height:60px">Products </button></a>
-		<a href="SearchCategory.php"><button style = "background-color:#F6F6F6; width:200px; height:60px">Categories </button></a>
-		<a href="SignInPage.php"><button style = "background-color:#F6F6F6; width:200px; height:60px">Sign in / Register </button></a>
+
+		<p> </p>
+		<p> </p>
+		<p> </p>
+		<p> </p>
+		<p> </p>
+	
+  		<div class="center">
+			<a href="SignInPage.php"><button style = "text-align:center; background-color:#F6F6F6; width:200px; height:60px">Sign in / Register </button></a>
+		</div>
+	
+		
 		<p title="Ur ugly"style="color: #4F3142; font-family: Comic Sans MS; text-align:center;">
 		I <3 U </p>
-	
-		<p> </p>
-		<p> </p>
-		<p> </p>
-		<p> </p>
-		<p> </p>
 		<img style = align:center; src="https://www.pngkey.com/png/full/8-87499_image-download-design-watercolour-flowers-painting-hd-watercolor.png" width="600" height ="600" {margin-right: 20%}>
 		<p> </p>
-		
-		
+
+		<!-- <a href="SearchCountry.php"><button style = "background-color:#F6F6F6; width:200px; height:60px">Countries </button></a>
+		<a href="SearchProduct.php"><button style = "background-color:#F6F6F6; width:200px; height:60px">Products </button></a>
+		<a href="SearchCategory.php"><button style = "background-color:#F6F6F6; width:200px; height:60px">Categories </button></a>
+		 -->
+	
 		<!--
 		<p title="Ur ugly" style="color: #DBCCD4; font-size:50px;">Hover ur mouse here.</p>
 		
