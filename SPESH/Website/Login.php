@@ -74,7 +74,16 @@
 			
 			<input type="submit" value="Sign In" />
 		</div>
-		<h2 style = "color: #4F2E38">Admin Login</h2>
+	
+		</form>
+		
+    	</form>
+		<!-- <a href="CustomerLogin.php"><button style = "background-color:#F6F6F6; width:200px; height:60px">Login Here</button></a>
+		 -->
+	</div>
+	<div class="row">
+	<div class="column">
+    <h2 style = "color: #4F2E38">Admin Login</h2>
 		<form action="ExplorePage.php" method="post">
 		<div>
 			<label>Username:</label>
@@ -86,62 +95,6 @@
 			
 			<input type="submit" value="Sign In" />
 		</div>
-		</form>
-		
-    	</form>
-		<!-- <a href="CustomerLogin.php"><button style = "background-color:#F6F6F6; width:200px; height:60px">Login Here</button></a>
-		 -->
-	</div>
-	<div class="row">
-	<div class="column">
-		<h2 style = "color: #4F2E38">Not A Member? Sign Up Here!</h2>
-		<form action="ExplorePage.php" method="post">
-            <div>
-                <label>Username:</label>
-                <input type="text" />
-            </div>
-            <div>
-                <label>Email:</label>
-                <input type="text" />
-            </div>
-            <div>
-                <label>Card Number:</label>
-                <input type="text" />
-            </div>
-            <div>
-                <label>CVV:</label>
-                <input type="text" />
-            </div>
-            <div>
-                <label>Expiration Date:</label>
-                <input type="text" />
-            </div>
-            <div>
-                <label>Country:</label>
-                <input type="text" />
-            </div>
-            <div>
-                <label>Province:</label>
-                <input type="text" />
-            </div>
-            <div>
-                <label>City:</label>
-                <input type="text" />
-            </div>
-            <div>
-                <label>Address:</label>
-                <input type="text" />
-            </div>
-            <div>
-            <label>Postal Code:</label>
-                <input type="text" />
-            </div>
-            <div>
-                <label>Password: </label>
-                <input type="password" />
-                <input type="submit" value="Sign Up" />
-            </div>
-			
         </form>
 		</div>
 		<a href="HomePage.php"><input type="button" value="Back" style="float: left;"></a>

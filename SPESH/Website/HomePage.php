@@ -34,17 +34,21 @@
 	<img style = align:center; src="https://www.pngmart.com/files/21/Aesthetic-Flowers-Transparent-PNG.png" width="800" height ="800" class="center"{margin-right: 30%}>
 		
 		<audio src="https://www.youtube.com/watch?v=OYvTbSU6TC0&ab_channel=WhenAllisSaid%26Done" loop autoplay ></audio>
+		<p style = "text-align:right; font-size:10px;"> SPESH for special ppl ;)</p>
 
 		<h1 style="color: #451C29; font-size:60px; text-align:center;">SPESH Market! </h1>
+		<p style = "color: #451C29;text-align:right; font-size:15px;"> <strong> VIP only </strong></p>
 		
 		<!--  6D4F60-->
 
-		<p style = "text-align:center; font-size:20px;"> Shop online at SPESH wherever, whenever to explore our diverse selection of international ingredients. It's never been easier to have the taste of home right at your finger tips :D</p>
+		<p style = "text-align:center; font-size:20px;"> Shop online at SPESH wherever, whenever to explore our diverse selection of international snacks. It's never been easier to have the taste of home right at your finger tips!</p>
 		
 		
 		<p style = "color: #451C29;text-align:center; font-size:30px;"> <strong> Sign in to continue! </strong></p>
+		<p title="Ur ugly"style="color: #4F3142; font-family: Comic Sans MS; text-align:center;">
+		I <3 U </p>
+		<p> </p>
 		
-
 		<p> </p>
 		<p> </p>
 		<p> </p>
@@ -52,13 +56,11 @@
 		<p> </p>
 	
   		<div class="center">
-			<a href="Login.php"><button style = "text-align:center; background-color:#F6F6F6; width:200px; height:60px">Sign in / Register </button></a>
+			<a href="Login.php"><button style = "text-align:center; background-color:#F6F6F6; width:200px; height:60px">Sign in now</button></a>
 		</div>
 	
 		
-		<p title="Ur ugly"style="color: #4F3142; font-family: Comic Sans MS; text-align:center;">
-		I <3 U </p>
-		<p> </p>
+		
 
 		<!-- <a href="SearchCountry.php"><button style = "background-color:#F6F6F6; width:200px; height:60px">Countries </button></a>
 		<a href="SearchProduct.php"><button style = "background-color:#F6F6F6; width:200px; height:60px">Products </button></a>
