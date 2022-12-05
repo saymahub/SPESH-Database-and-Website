@@ -28,7 +28,7 @@ body {
 
 </style>
 </head>
-	
+  <title>Explore</title>
 	<body>
 		<audio src="https://www.youtube.com/watch?v=OYvTbSU6TC0&ab_channel=WhenAllisSaid%26Done" loop autoplay ></audio>
 

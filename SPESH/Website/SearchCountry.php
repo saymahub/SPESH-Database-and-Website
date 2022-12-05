@@ -56,7 +56,7 @@ $mysqli->close();
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Search By Country</title>
 </head>
 <body style="background-color:#DBCCD4">
 <h1 style="color: #6D4F60; font-size:50px; text-align:center;">Countries </h1>
