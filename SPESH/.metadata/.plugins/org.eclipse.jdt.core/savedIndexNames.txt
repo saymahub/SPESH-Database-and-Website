@@ -1,4 +1,0 @@
-INDEX VERSION 1.131+C:\Users\samir\eclipse-workspace\SPESH\.metadata\.plugins\org.eclipse.jdt.core
-3790625672.index
-857434464.index
-1865797976.index
