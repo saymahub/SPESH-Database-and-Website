@@ -22,7 +22,7 @@
 
     $user_type = "";
 
-    if($success) //If username and password are correct, retrieve the job type
+    if($success) //If username and password are correct, retrieve the user type
     {
 
         $sql = "SELECT user_type FROM users WHERE username = '$username' AND password = '$password'";
@@ -31,7 +31,7 @@
     }
     else
     {
-        header("Location: Login.php");
+        header("Location: HomePage.php");
     }
 
     //close connection
