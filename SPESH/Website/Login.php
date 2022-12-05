@@ -143,6 +143,9 @@ text-align: right;
             </div>
 			
         </form>
+		</div>
+		<a href="HomePage.php"><input type="button" value="Back" style="float: left;"></a>
+		
 	</div>
 	</div>
 
