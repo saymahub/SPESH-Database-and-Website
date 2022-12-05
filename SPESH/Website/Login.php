@@ -63,19 +63,18 @@
 	<div class="row">
 	<div class="column">
 		<h2 style = "color: #4F2E38">Customer Login</h2>
-		<form action="ExplorePage.php" method="post">
+		<form action="VerifyUser.php" method="post">
 		<div>
 			<label>Username:</label>
-			<input type="text" />
+			<input type="text" name="username"/>
 		</div>
 		<div>
 			<label>Password</label>
-			<input type="password" />
+			<input type="password" name="password"/>
 			
 			<input type="submit" value="Sign In" />
 		</div>
-	
-		</form>
+        </form>
 		
     	</form>
 		<!-- <a href="CustomerLogin.php"><button style = "background-color:#F6F6F6; width:200px; height:60px">Login Here</button></a>
@@ -84,14 +83,14 @@
 	<div class="row">
 	<div class="column">
     <h2 style = "color: #4F2E38">Admin Login</h2>
-		<form action="DistributorsPage.php" method="post">
+		<form action="VerifyUser.php" method="post">
 		<div>
 			<label>Username:</label>
-			<input type="text" />
+			<input type="text" name="username"/>
 		</div>
 		<div>
 			<label>Password</label>
-			<input type="password" />
+			<input type="password" name="password"/>
 			
 			<input type="submit" value="Sign In" />
 		</div>
