@@ -79,28 +79,12 @@ INSERT INTO `product` (`id`, `country`, `category`, `prod name`, `price`) VALUES
 (19, 'China', 'food', 'coca cola', '$10.00'),
 (20, 'England', 'food', 'coca cola', '$10.00');
 
---
--- Table structure for table `admin`
---
-
-CREATE TABLE `admins` (
-  `id` int(10) NOT NULL,
-  `username` varchar(200) NOT NULL,
-  `email` varchar(200) NOT NULL,
-  `password` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
-
-INSERT INTO `admins` (`id`, `username`, `email`, `password`) VALUES
-(1, 'adminsayma', 'sayma@gmail.com', 'adminpass'),
-(2, 'adminsamira', 'samira@gmail.com', 'adminpass'),
-(3, 'adminmichele', 'michele@gmail.com', 'adminpass');
 
 --
--- Table structure for table `customers`
+-- Table structure for table `users`
 --
 
-CREATE TABLE `customers` (
+CREATE TABLE `users` (
   `id` int(10) NOT NULL,
   `username` varchar(200) NOT NULL,
   `email` varchar(200) NOT NULL,
@@ -108,15 +92,19 @@ CREATE TABLE `customers` (
   `cvv` varchar(200) DEFAULT NULL,
   `expiry` varchar(200) DEFAULT NULL,
   `password` varchar(200) NOT NULL,
-  `address` varchar(200) NOT NULL
+  `address` varchar(200) NOT NULL,
+  `user_type` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 
-INSERT INTO `customers` (`id`, `username`, `email`, `card`, `cvv`, `expiry`,`password`, `address`) VALUES
-(1, 'MrGuy', 'guy@gmail.com', '1111111111111111', '123', '12/24', 'password', 'university drive'),
-(2, 'MsGirl', 'girl@gmail.com', '2222222222222222', '533', '04/25', 'password', 'university drive'),
-(3, 'Jana', 'Jana@ucalgary.ca', '3333333333333333', '354', '10/24', 'password', 'university drive'),
-(4, 'Sathya', 'baby@ucalgary.ca', '4444444444444444', '163', '08/26', 'password', 'university drive');
+INSERT INTO `users` (`id`, `username`, `email`, `card`, `cvv`, `expiry`,`password`, `address`, `user_type`) VALUES
+(1, 'MrGuy', 'guy@gmail.com', '1111111111111111', '123', '12/24', 'password', 'university drive', 'customer'),
+(2, 'MsGirl', 'girl@gmail.com', '2222222222222222', '533', '04/25', 'password', 'university drive', 'customer'),
+(3, 'Jana', 'Jana@ucalgary.ca', '3333333333333333', '354', '10/24', 'password', 'university drive', 'customer'),
+(4, 'Sathya', 'baby@ucalgary.ca', '4444444444444444', '163', '08/26', 'password', 'university drive', 'customer'),
+(5, 'adminsayma', 'sayma@gmail.com', '2222222222222222', '533', '04/25', 'adminpass', 'university drive', 'admin'),
+(6, 'adminsamira', 'samira@gmail.com', '3333333333333333', '354', '10/24', 'adminpass', 'university drive', 'admin'),
+(7, 'adminmichele', 'michele@gmail.com', '4444444444444444', '163', '08/26', 'adminpass', 'university drive', 'admin');
 
 --
 -- Table structure for table `distributer`
@@ -190,18 +178,18 @@ ALTER TABLE `shipping deets`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- Indexes for table `customers`
+-- Indexes for table `users`
 --
 
-ALTER TABLE `customers`
+ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `email` (`email`);
 
 --
--- AUTO_INCREMENT for table `customers`
+-- AUTO_INCREMENT for table `users`
 --
 
-ALTER TABLE `customers`
+ALTER TABLE `users`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
@@ -217,22 +205,7 @@ ALTER TABLE `product`
 
 ALTER TABLE `product`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
-
---
--- Indexes for table `admins`
---
-ALTER TABLE `admins`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `email` (`email`);
-
---
--- AUTO_INCREMENT for table `admins`
---
-
-ALTER TABLE `admins`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
-COMMIT;
-
+  
 --
 -- Indexes for table `distributer`
 --
