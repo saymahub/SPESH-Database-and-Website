@@ -63,10 +63,10 @@
 	<div class="row">
 	<div class="column">
 		<h2 style = "color: #4F2E38">Customer Login</h2>
-		<form action="VerifyUser.php" method="post">
+		<form action="ExplorePage.php" method="post">
 		<div>
 			<label>Username:</label>
-			<input type="username" />
+			<input type="text" />
 		</div>
 		<div>
 			<label>Password</label>
@@ -84,10 +84,10 @@
 	<div class="row">
 	<div class="column">
     <h2 style = "color: #4F2E38">Admin Login</h2>
-		<form action="VerifyUser.php" method="post">
+		<form action="DistributorsPage.php" method="post">
 		<div>
 			<label>Username:</label>
-			<input type="username" />
+			<input type="text" />
 		</div>
 		<div>
 			<label>Password</label>
