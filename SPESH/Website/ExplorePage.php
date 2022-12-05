@@ -68,13 +68,6 @@
                 Add to Cart 
             </button>
         </a>
-        <a href="AddToWishlist.php">
-            <button style = "background-color:#F6F6F6; width:200px; height:30px; font-size:16px; position:relative; left:350px; top: -110px;">
-                Add to Wishlist 
-            </button>
-        </a>
-
-
 
         <p style = "color: #6A475A;position:relative; font-size:30px; left: 300px; top: 90px;" class = "adjust-line-height"> 
             <strong> Item Name </strong>
@@ -97,13 +90,6 @@
                 Add to Cart 
             </button>
         </a>
-        <a href="AddToWishlist.php">
-            <button style = "background-color:#F6F6F6; width:200px; height:30px; font-size:16px; position:relative; left:350px; top: -110px;">
-                Add to Wishlist 
-            </button>
-        </a>
-
-
 
         <p style = "color: #6A475A;position:relative; font-size:30px; left: 300px; top: 90px;" class = "adjust-line-height"> 
             <strong> Item Name </strong>
@@ -126,13 +112,6 @@
                 Add to Cart 
             </button>
         </a>
-        <a href="AddToWishlist.php">
-            <button style = "background-color:#F6F6F6; width:200px; height:30px; font-size:16px; position:relative; left:350px; top: -110px;">
-                Add to Wishlist 
-            </button>
-        </a>		
-
-
 
         <p style = "color: #6A475A;position:relative; font-size:30px; left: 300px; top: 90px;" class = "adjust-line-height"> 
             <strong> Item Name </strong>
@@ -153,11 +132,6 @@
         <a href="AddToCart.php">
             <button style = "background-color:#F6F6F6; width:200px; height:30px; font-size:16px; position:relative; left:554px; top: -150px;">
                 Add to Cart 
-            </button>
-        </a>
-        <a href="AddToWishlist.php">
-            <button style = "background-color:#F6F6F6; width:200px; height:30px; font-size:16px; position:relative; left:350px; top: -110px;">
-                Add to Wishlist 
             </button>
         </a>
 
