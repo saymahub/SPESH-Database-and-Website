@@ -24,7 +24,7 @@
 	<h2 style="color: #451C29; font-size:20px; text-align:center;" >You can expect your package to arrive NEVER</h2>
     <h2 style="color: #451C29; font-size:15px; text-align:center;" >You fool. stupid idiot. why did u order things on such expensive nonsense.</h2>
 
-    <a href="Login.php"><input type="button" value="Back" style="float: left;"></a>
+    <a href="HomePage.php"><input type="button" value="Return Home" style="float: left;"></a>
 		
 </body>
 </html>

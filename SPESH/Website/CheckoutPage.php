@@ -90,7 +90,7 @@
         </form>
 
         
-        <form action="ThankYou.php" method="post">
+        <form action="ConfirmationPage.php" method="post">
 
             <br>
                 <br>
