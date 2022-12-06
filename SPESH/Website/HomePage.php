@@ -34,10 +34,10 @@
 	<img style = align:center; src="https://www.pngmart.com/files/21/Aesthetic-Flowers-Transparent-PNG.png" width="800" height ="800" class="center"{margin-right: 30%}>
 		
 		<audio src="https://www.youtube.com/watch?v=OYvTbSU6TC0&ab_channel=WhenAllisSaid%26Done" loop autoplay ></audio>
-		<p style = "text-align:right; font-size:10px;"> SPESH for special ppl ;)</p>
+		<p style = " position:relative; left: 1810px;font-size:10px;"> SPESH for special ppl ;)</p>
 
 		<h1 style="color: #451C29; font-size:60px; text-align:center;">SPESH Market! </h1>
-		<p style = "color: #451C29;text-align:right; font-size:15px;"> <strong> VIP only </strong></p>
+		<p style = "color: #451C29; position:relative; left: 1860px; top: -135px;font-size:15px;"> <strong> VIP only </strong></p>
 		
 		<!--  6D4F60-->
 
