@@ -42,6 +42,7 @@
 		<div>
 			<label>Search By Country:</label>
 			<input type="text" name="country"/>
+            <label>OR</label>
             <br></br>
             <label>Search By Category:</label>
 			<input type="text" name="selection2"/>
@@ -51,6 +52,8 @@
         </form>
         <form action="Cart.php" method="post">
 		<div>
+        <br></br>
+        <label>OR</label>
         <br></br>
 			<label>Selection 1:</label>
 			<input type="text" name="selection1"/>
