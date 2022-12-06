@@ -58,7 +58,7 @@ body{
 }
 .about{
 	height: 100%;
-	width: 24%;
+	width: 50%;
 }
 .title{
 	padding-top: 10px;
