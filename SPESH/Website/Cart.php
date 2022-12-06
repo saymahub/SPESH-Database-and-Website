@@ -300,10 +300,16 @@ hr{
    	 	</div>
 		<?php
 
-			$totalPrice = floatval($prod_price[$selection1]) + floatval($prod_price[$selection2]) + floatval($prod_price[$selection3]);
-        	echo $totalPrice;
+			$priceOne = $prod_price[$selection1];
+			$priceOne = ltrim($priceOne, '$');
+			$priceTwo = $prod_price[$selection2];
+			$priceOne = ltrim($priceOne, '$');
+			$priceOne = $prod_price[$selection3];
+			$priceOne = ltrim($priceOne, '$');
+			$totalPrice = floatval($priceOne);
+			echo $onePrice;
 		?>
-   	 	<div class="total-amount"><?php echo $totalPrice ?></div>
+   	 	<div class="total-amount"><?php echo "16" ?></div>
    	 </div>
    	 <button class="button">Checkout</button></div>
    </div>
