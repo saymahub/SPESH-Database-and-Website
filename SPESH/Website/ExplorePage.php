@@ -38,9 +38,20 @@
 		<h1 style="color: #451C29; font-size:60px; text-align:center;">SPESH Market! </h1>
 		<p style = "text-align:center; font-size:20px;"> Explore the multitude of products SPESH has to offer!</p>
 		<a href="Login.php"><input type="button" value="Back" style="position:relative; font-size:12px; left: 20px; top: -170px;"></a>
-        
+        <form action="SpecificSearch.php" method="post">
+		<div>
+			<label>Search By Country::</label>
+			<input type="text" name="country"/>
+            <br></br>
+            <label>Search By Category:</label>
+			<input type="text" name="selection2"/>
+            <br></br>
+            <input type="submit" value="Confirm Selection" />
+		</div>
+        </form>
         <form action="Cart.php" method="post">
 		<div>
+        <br></br>
 			<label>Selection 1:</label>
 			<input type="text" name="selection1"/>
             <label>Selection 2:</label>
@@ -70,7 +81,7 @@
                 $mysqli->connect_error);
             }
             
-            $sql = " SELECT * FROM product WHERE bought = 'no'";
+            $sql = " SELECT * FROM product";
             $query = mysqli_query($mysqli, $sql);
                         $prod = mysqli_fetch_array($query);
             
