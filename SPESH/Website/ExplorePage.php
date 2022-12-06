@@ -38,6 +38,18 @@
 		<h1 style="color: #451C29; font-size:60px; text-align:center;">SPESH Market! </h1>
 		<p style = "text-align:center; font-size:20px;"> Explore the multitude of products SPESH has to offer!</p>
 		<a href="Login.php"><input type="button" value="Back" style="position:relative; font-size:12px; left: 20px; top: -170px;"></a>
+        
+        <form action="Cart.php" method="post">
+		<div>
+			<label>Selection 1:</label>
+			<input type="text" name="selection1"/>
+            <label>Selection 2:</label>
+			<input type="text" name="selection2"/>
+            <label>Selection 3:</label>
+			<input type="text" name="selection3"/>
+            <input type="submit" value="Confirm Selection" />
+		</div>
+        </form>
         <?php
             // Username is root
             $user = 'root';
@@ -113,17 +125,7 @@
             
         $mysqli->close();
         ?> 
-        <form action="Cart.php" method="post">
-		<div>
-			<label>Selection 1:</label>
-			<input type="text" name="selection1"/>
-            <label>Selection 2:</label>
-			<input type="text" name="selection2"/>
-            <label>Selection 3:</label>
-			<input type="text" name="selection3"/>
-            <input type="submit" value="Confirm Selection" />
-		</div>
-        </form>
+       
         
         <title>Item</title>
         <style>

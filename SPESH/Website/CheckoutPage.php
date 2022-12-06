@@ -66,18 +66,18 @@
   	<p style = "color: #451C29; text-align:center; font-size:30px;" > <strong>Payment and Shipping</strong><p>
         <html>
         <head>
-        <script>
+        <!-- <script>
         function myFunction() {
             var r = confirm("Please confirm your cart or cancel your order.");
             document.getElementById("demo").innerHTML;
         }
-        </script>
+        </script> -->
         </head>
         <body>
         <?php
         ?>
-        <button onclick="myFunction()">Confirm Cart</button>
-        <p id="demo"></p>
+        <!-- <button onclick="myFunction()">Confirm Cart</button>
+        <p id="demo"></p> -->
         </body>
         </html>
         
