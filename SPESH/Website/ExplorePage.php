@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <!-- <?php
     session_start();
@@ -70,19 +68,40 @@
         $prod_country = [];
         $prod_price = [];
         $prod_img = [];
+        $prod_description = [];
         while($prod_row = mysqli_fetch_array($query)){
             $prod_name[$myvariable] = $prod_row['prod name'];
             $prod_country[$myvariable] = $prod_row['country'];
             $prod_price[$myvariable] = $prod_row['price'];
             $prod_img[$myvariable] = $prod_row['image url'];
+            $prod_description[$myvariable] = $prod_row['description'];
             
             //echo $precio_digital;
             ?>
-                <img src= "<?php echo $prod_img[$myvariable] ?>" alt="test" height=200/>
+                <!-- <img src= "<?php echo $prod_img[$myvariable] ?>" alt="test" height=200/> -->
+                <p style = "color: #6A475A;position:relative; font-size:30px; left: 300px; top: 90px;" class = "adjust-line-height"> 
+                    <strong> "<?php echo $prod_name[$myvariable] ?>"</strong>
+                </p>
+                <img src= "<?php echo $prod_img[$myvariable] ?>" alt="test"
+                    style = "width:200px; position:relative; left:60px; top: 30px;">
+                <b> </b>
+                <b> </b>
+
+                <p style = "color: #6A475A; position:relative; font-size:18px; left:300px; top: -70px;"  class = "adjust-line-height"> 
+                    <strong> "<?php echo $prod_description[$myvariable] ?>"</strong>
+                </p>
+                <br> </br>
+                <br> </br>
+                <a href="Cart.php">
+                    <a href="Login.php"><button style = "background-color:#F6F6F6; width:200px; height:30px; font-size:16px; position:relative; left:554px; top: -150px;">
+                        Add to Cart 
+                    </button>
+                </a>
             <?php
-            echo '<div style="font-size:1.25em;color:#6A475A;font-weight:bold;"><span style="font-size:30px;color:#6A475A;font-weight:bold;left: 300px; top: 90px;">'.$prod_name[$myvariable].'</span></div>';
+            // echo '<div style="font-size:1.25em;color:#6A475A;font-weight:bold;"><span style="font-size:30px;color:#6A475A;font-weight:bold;position:relative;left: 300px; top: 90px;">'.$prod_name[$myvariable].'</span></div>';
            
-            echo "<br />";
+            // echo "<br />";
+            
     
             echo"\r\n";
             $myvariable = $myvariable + 1;
