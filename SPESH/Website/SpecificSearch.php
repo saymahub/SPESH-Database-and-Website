@@ -47,7 +47,7 @@
 
 </style>
 </head>
-  <title>Explore</title>
+  <title>Search Results</title>
 	<body>
 
 		<h1 style="color: #451C29; font-size:60px; text-align:center;">SPESH Market! </h1>
@@ -92,6 +92,7 @@
             $prod_id = 0;
             $prod_name = [];
             $prod_country = [];
+            $prod_category = [];
             $prod_price = [];
             $prod_img = [];
             $prod_description = [];
@@ -100,6 +101,7 @@
                 $prod_id = $prod_row['id'];
                 $prod_name[$myvariable] = $prod_row['prod name'];
                 $prod_country[$myvariable] = $prod_row['country'];
+                $prod_category[$myvariable] = $prod_row['category'];
                 $prod_price[$myvariable] = $prod_row['price'];
                 $prod_img[$myvariable] = $prod_row['image url'];
                 $prod_description[$myvariable] = $prod_row['description'];
