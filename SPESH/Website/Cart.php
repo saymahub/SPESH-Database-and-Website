@@ -314,7 +314,7 @@ hr{
 		?>
    	 	<div class="total-amount"><?php echo $totalPrice ?></div>
    	 </div>
-   	 <button class="button">Checkout</button></div>
+   	 <a href="CheckoutPage.php"><button class="button">Checkout</button></div></a>
    </div>
 </body>
 </html>
