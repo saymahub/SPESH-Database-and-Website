@@ -189,54 +189,108 @@ hr{
 		$selection1 = $_POST["selection1"];
 		$selection2 = $_POST["selection2"];
 		$selection3 = $_POST["selection3"];
+
+		// Username is root
+		$user = 'root';
+		$password = '';
+		
+		$database = 'speshdb';
+		
+		// Server is localhost with
+		// port number 3306
+		$servername='localhost:3306';
+		$mysqli = new mysqli($servername, $user,
+						$password, $database);
+		
+		// Checking for connections
+		if ($mysqli->connect_error) {
+			die('Connect Error (' .
+			$mysqli->connect_errno . ') '.
+			$mysqli->connect_error);
+		}
+		
+		$myvariable = 0;
+		$prod_img = [];
+		$prod_name = [];
+		$prod_price = [];
+		$sql = " SELECT * FROM product WHERE bought = 'no'";
+		$query = mysqli_query($mysqli, $sql);
+    	
+
+		while ($prod_row = mysqli_fetch_array($query)) {
+			$prod_img[$myvariable] = $prod_row['image url'];
+			$prod_name[$myvariable] = $prod_row['prod name'];
+			$prod_price[$myvariable] = $prod_row['price'];
+	    	$myvariable = $myvariable + 1;
+		}
 	?>
-   <div class="CartContainer">
-   	   <div class="Header">
-   	   	<h3 class="Heading">Shopping Cart</h3>
-   	   	<h5 class="Action">Remove all</h5>
-   	   </div>
+	<div class="CartContainer">
+			<div class="Header">
+				<h3 class="Heading">Shopping Cart</h3>
+				<h5 class="Action">Remove all</h5>
+			</div>
+	<?php
+		if ($selection1 >= 1){
+			?>	
+			<div class="Cart-Items">
+				<div class="image-box">
+					<img src="<?php echo $prod_img[$selection1] ?>" style={{ height="120px" }} />
+				</div>
+				<div class="about">
+					<h1 class="title"><?php echo $prod_name[$selection1] ?></h1>
+				</div>
+				<div class="prices">
+					<div class="amount"><?php echo $prod_price[$selection1] ?></div>
+					<div class="save"><u>Save for later</u></div>
+					<div class="remove"><u>Remove</u></div>
+				</div>
+			</div>
+			<?php
+		}
+	?>
+   
 
-   	   <div class="Cart-Items">
-   	   	  <div class="image-box">
-   	   	  	<img src="images/apple.png" style={{ height="120px" }} />
-   	   	  </div>
-   	   	  <div class="about">
-   	   	  	<h1 class="title">INHERIT ITEM</h1>
-   	   	  	<h3 class="subtitle">250ml</h3>
-   	   	  	<img src="images/veg.png" style={{ height="30px" }}/>
-   	   	  </div>
-   	   	  <div class="counter">
-   	   	  	<div class="btn">+</div>
-   	   	  	<div class="count">300</div>
-   	   	  	<div class="btn">-</div>
-   	   	  </div>
-   	   	  <div class="prices">
-   	   	  	<div class="amount">INHERIT PRICES</div>
-   	   	  	<div class="save"><u>Save for later</u></div>
-   	   	  	<div class="remove"><u>Remove</u></div>
-   	   	  </div>
-   	   </div>
+   <?php
+		if ($selection2 >= 1){
+			?>
+			<div class="Cart-Items">
+				<div class="image-box">
+					<img src="<?php echo $prod_img[$selection2] ?>" style={{ height="120px" }} />
+				</div>
+				<div class="about">
+					<h1 class="title"><?php echo $prod_name[$selection2] ?></h1>
+				</div>
+				<div class="prices">
+					<div class="amount"><?php echo $prod_price[$selection2] ?></div>
+					<div class="save"><u>Save for later</u></div>
+					<div class="remove"><u>Remove</u></div>
+				</div>
+			</div>
+			<?php
+		}
+	?>
+	  
+	<?php
+		if ($selection3 >= 1){
+			?>
+			<div class="Cart-Items">
+				<div class="image-box">
+					<img src="<?php echo $prod_img[$selection3] ?>" style={{ height="120px" }} />
+				</div>
+				<div class="about">
+					<h1 class="title"><?php echo $prod_name[$selection3] ?></h1>
+				</div>
+				<div class="prices">
+					<div class="amount"><?php echo $prod_price[$selection3] ?></div>
+					<div class="save"><u>Save for later</u></div>
+					<div class="remove"><u>Remove</u></div>
+				</div>
+			</div>
+			<?php
+		}
+	?>
 
-          <div class="Cart-Items">
-   	   	  <div class="image-box">
-   	   	  	<img src="images/apple.png" style={{ height="120px" }} />
-   	   	  </div>
-   	   	  <div class="about">
-   	   	  	<h1 class="title">INHERIT ITEM</h1>
-   	   	  	<h3 class="subtitle">250ml</h3>
-   	   	  	<img src="images/veg.png" style={{ height="30px" }}/>
-   	   	  </div>
-   	   	  <div class="counter">
-   	   	  	<div class="btn">+</div>
-   	   	  	<div class="count">2</div>
-   	   	  	<div class="btn">-</div>
-   	   	  </div>
-   	   	  <div class="prices">
-   	   	  	<div class="amount">INHERIT PRICES</div>
-   	   	  	<div class="save"><u>Save for later</u></div>
-   	   	  	<div class="remove"><u>Remove</u></div>
-   	   	  </div>
-   	   </div>
+    
    	 <hr> 
    	 <div class="checkout">
    	 <div class="total">
@@ -244,7 +298,12 @@ hr{
    	 		<div class="Subtotal">Sub-Total</div>
    	 		<div class="items">2 items</div>
    	 	</div>
-   	 	<div class="total-amount">$6.18</div>
+		<?php
+
+			$totalPrice = floatval($prod_price[$selection1]) + floatval($prod_price[$selection2]) + floatval($prod_price[$selection3]);
+        	echo $totalPrice;
+		?>
+   	 	<div class="total-amount"><?php echo $totalPrice ?></div>
    	 </div>
    	 <button class="button">Checkout</button></div>
    </div>
