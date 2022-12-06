@@ -47,7 +47,7 @@ body{
 .Cart-Items{
 	margin: auto;
 	width: 90%;
-	height: 30%;
+	height: 22%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -57,7 +57,7 @@ body{
 	text-align: center;
 }
 .about{
-	height: 100%;
+	height: 90%;
 	width: 50%;
 }
 .title{
