@@ -26,5 +26,13 @@
         }
 
     </style>
+    </head>
+    <title>Contact Distributor</title>
+	<body>
+        <h1 style="color: #451C29; font-size:60px; text-align:center;">SPESH Market! </h1>
+        <p style = "color: #451C29; text-align:center; font-size:30px;" > <strong>Contact distributor</strong><p>
+        
+        
+    </body>
 </html>
 
