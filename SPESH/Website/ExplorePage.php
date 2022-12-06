@@ -1,40 +1,4 @@
-<?php
- 
-// Username is root
-$user = 'root';
-$password = '';
- 
-$database = 'speshdb';
- 
-// Server is localhost with
-// port number 3306
-$servername='localhost:3306';
-$mysqli = new mysqli($servername, $user,
-                $password, $database);
- 
-// Checking for connections
-if ($mysqli->connect_error) {
-    die('Connect Error (' .
-    $mysqli->connect_errno . ') '.
-    $mysqli->connect_error);
-}
 
-$sql = " SELECT * FROM product ";
-$query = mysqli_query($mysqli, $sql);
-            $prod = mysqli_fetch_array($query);
-
-$myvariable = 0;
-$prod_name = [];
-while($prod_row = mysqli_fetch_array($query)){
-    $prod_name[$myvariable] = $prod_row['prod name'];
-    echo $prod_name[$myvariable];
-    echo"\r\n";
-    $myvariable = $myvariable + 1;
-
-}
-    
-$mysqli->close();
-?>
 
 <!DOCTYPE html>
 <!-- <?php
@@ -72,10 +36,61 @@ $mysqli->close();
 </head>
   <title>Explore</title>
 	<body>
+
 		<h1 style="color: #451C29; font-size:60px; text-align:center;">SPESH Market! </h1>
 		<p style = "text-align:center; font-size:20px;"> Explore the multitude of products SPESH has to offer!</p>
 		<a href="Login.php"><input type="button" value="Back" style="position:relative; font-size:12px; left: 20px; top: -170px;"></a>
+        <?php
+        // Username is root
+        $user = 'root';
+        $password = '';
+        
+        $database = 'speshdb';
+        
+        // Server is localhost with
+        // port number 3306
+        $servername='localhost:3306';
+        $mysqli = new mysqli($servername, $user,
+                        $password, $database);
+        
+        // Checking for connections
+        if ($mysqli->connect_error) {
+            die('Connect Error (' .
+            $mysqli->connect_errno . ') '.
+            $mysqli->connect_error);
+        }
+        
+        $sql = " SELECT * FROM product ";
+        $query = mysqli_query($mysqli, $sql);
+                    $prod = mysqli_fetch_array($query);
+        
+                    
+        $myvariable = 0;
+        $prod_name = [];
+        $prod_country = [];
+        $prod_price = [];
+        $prod_img = [];
+        while($prod_row = mysqli_fetch_array($query)){
+            $prod_name[$myvariable] = $prod_row['prod name'];
+            $prod_country[$myvariable] = $prod_row['country'];
+            $prod_price[$myvariable] = $prod_row['price'];
+            $prod_img[$myvariable] = $prod_row['image url'];
+            
+            //echo $precio_digital;
+            ?>
+                <img src= "<?php echo $prod_img[$myvariable] ?>" alt="test" height=200/>
+            <?php
+            echo '<div style="font-size:1.25em;color:#6A475A;font-weight:bold;"><span style="font-size:30px;color:#6A475A;font-weight:bold;left: 300px; top: 90px;">'.$prod_name[$myvariable].'</span></div>';
+           
+            echo "<br />";
+    
+            echo"\r\n";
+            $myvariable = $myvariable + 1;
 
+        }
+            
+        $mysqli->close();
+    ?> 
         
         <title>Item</title>
         <style>
