@@ -58,7 +58,7 @@
             $mysqli->connect_error);
         }
         
-        $sql = " SELECT * FROM product ";
+        $sql = " SELECT * FROM product WHERE bought = 'no'";
         $query = mysqli_query($mysqli, $sql);
                     $prod = mysqli_fetch_array($query);
         
@@ -87,6 +87,10 @@
                 <b> </b>
                 <b> </b>
 
+                <p style = "color: #6A475A; position:relative; font-size:24px; left:100px; top: 40px;"  class = "adjust-line-height"> 
+                    <strong> <?php echo $prod_price[$myvariable] ?></strong>
+                </p>
+
                 <p style = "color: #6A475A; position:relative; font-size:18px; left:300px; top: -70px;"  class = "adjust-line-height"> 
                     <strong> "<?php echo $prod_country[$myvariable] ?>"</strong>
                 </p>
@@ -97,7 +101,7 @@
                 <br> </br>
                 <br> </br>
                 <a href="Cart.php">
-                    <a href="Login.php"><button style = "background-color:#F6F6F6; width:200px; height:30px; font-size:16px; position:relative; left:554px; top: -150px;">
+                    <button style = "background-color:#F6F6F6; width:200px; height:30px; font-size:16px; position:relative; left:554px; top: -150px;">
                         Add to Cart 
                     </button>
                 </a>
