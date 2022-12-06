@@ -88,7 +88,7 @@
       <div class="column">
         <h2 style="color: #4F2E38;"><?php echo $first_name[$myvariable] ?> <?php echo " " ?> <?php echo $last_name[$myvariable] ?></h2>
         <p><?php echo $email[$myvariable] ?></p>
-        <p>327 339 9302</p>
+        <p><?php echo $phone[$myvariable] ?></p></p>
         <img src="https://upload.wikimedia.org/wikipedia/en/d/da/Matt_LeBlanc_as_Joey_Tribbiani.jpg" width="150" height ="150" class="center"{margin-right: 30%}>
         <br></br>
         <a href="ContactDistributor.php"><input type="button" value="Contact" style="float: left;"></a>

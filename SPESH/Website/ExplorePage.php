@@ -166,6 +166,7 @@
         <br></br>
 			<label>Search By Country:</label>
 			<input type="text" name="country"/>
+            <input type="submit" value="Confirm Selection" />
             <label>OR</label>
             <br></br>
             <label>Search By Category:</label>
