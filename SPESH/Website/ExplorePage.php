@@ -40,7 +40,7 @@
 		<a href="Login.php"><input type="button" value="Back" style="position:relative; font-size:12px; left: 20px; top: -170px;"></a>
         <form action="SpecificSearch.php" method="post">
 		<div>
-			<label>Search By Country::</label>
+			<label>Search By Country:</label>
 			<input type="text" name="country"/>
             <br></br>
             <label>Search By Category:</label>
