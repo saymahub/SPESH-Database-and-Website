@@ -52,6 +52,18 @@
 
 		<h1 style="color: #451C29; font-size:60px; text-align:center;">SPESH Market! </h1>
         <?php
+			$countryFlag = 0;
+			$categoryFlag = 0;
+			if($_POST["country"] != null){
+				$country= $_POST["country"];
+				$countryFlag = 1;
+			}
+			
+			else{
+				$category = $_POST["category"];
+				$categoryFlag = 1;
+			}
+			
             // Username is root
             $user = 'root';
             $password = '';
@@ -95,28 +107,68 @@
                 //echo $precio_digital;
                 ?>
                 <!-- <img src= "<?php echo $prod_img[$myvariable] ?>" alt="test" height=200/> -->
-                
-                <p style = "color: #6A475A;position:relative; font-size:30px; left: 300px; top: 90px;" class = "adjust-line-height"> 
-                    <strong> <?php echo $counter ?></strong><strong> <?php echo $prod_name[$myvariable] ?></strong>
-                </p>
-                <img src= "<?php echo $prod_img[$myvariable] ?>" alt="test"
-                    style = "width:200px; position:relative; left:60px; top: 30px;">
-                <b> </b>
-                <b> </b>
+                <?php
+				if($countryFlag == 1){
+					if($prod_country[$myvariable] == $country && $_POST["country"] != null){
+					?>
+				
+					<p style = "color: #6A475A;position:relative; font-size:30px; left: 300px; top: 90px;" class = "adjust-line-height"> 
+						<strong> <?php echo $counter ?></strong><strong> <?php echo $prod_name[$myvariable] ?></strong>
+					</p>
+					<img src= "<?php echo $prod_img[$myvariable] ?>" alt="test"
+						style = "width:200px; position:relative; left:60px; top: 30px;">
+					<b> </b>
+					<b> </b>
 
-                <p style = "color: #6A475A; position:relative; font-size:24px; left:100px; top: 40px;"  class = "adjust-line-height"> 
-                    <strong> <?php echo $prod_price[$myvariable] ?></strong>
-                </p>
+					<p style = "color: #6A475A; position:relative; font-size:24px; left:100px; top: 40px;"  class = "adjust-line-height"> 
+						<strong> <?php echo $prod_price[$myvariable] ?></strong>
+					</p>
 
-                <p style = "color: #6A475A; position:relative; font-size:18px; left:300px; top: -70px;"  class = "adjust-line-height"> 
-                    <strong> "<?php echo $prod_country[$myvariable] ?>"</strong>
-                </p>
+					<p style = "color: #6A475A; position:relative; font-size:18px; left:300px; top: -70px;"  class = "adjust-line-height"> 
+						<strong> "<?php echo $prod_country[$myvariable] ?>"</strong>
+					</p>
 
-                <p style = "color: #6A475A; position:relative; font-size:18px; left:300px; top: -70px;"  class = "adjust-line-height"> 
-                    <strong> "<?php echo $prod_description[$myvariable] ?>"</strong>
-                </p>
-                <br> </br>
-                <br> </br>
+					<p style = "color: #6A475A; position:relative; font-size:18px; left:300px; top: -70px;"  class = "adjust-line-height"> 
+						<strong> "<?php echo $prod_description[$myvariable] ?>"</strong>
+					</p>
+					<br> </br>
+					<br> </br>
+
+					<?php
+					}
+				}
+
+				else if($categoryFlag == 1){
+					if($prod_category[$myvariable] == $category && $_POST["category"] != null){
+					?>
+				
+					<p style = "color: #6A475A;position:relative; font-size:30px; left: 300px; top: 90px;" class = "adjust-line-height"> 
+						<strong> <?php echo $counter ?></strong><strong> <?php echo $prod_name[$myvariable] ?></strong>
+					</p>
+					<img src= "<?php echo $prod_img[$myvariable] ?>" alt="test"
+						style = "width:200px; position:relative; left:60px; top: 30px;">
+					<b> </b>
+					<b> </b>
+
+					<p style = "color: #6A475A; position:relative; font-size:24px; left:100px; top: 40px;"  class = "adjust-line-height"> 
+						<strong> <?php echo $prod_price[$myvariable] ?></strong>
+					</p>
+
+					<p style = "color: #6A475A; position:relative; font-size:18px; left:300px; top: -70px;"  class = "adjust-line-height"> 
+						<strong> "<?php echo $prod_country[$myvariable] ?>"</strong>
+					</p>
+
+					<p style = "color: #6A475A; position:relative; font-size:18px; left:300px; top: -70px;"  class = "adjust-line-height"> 
+						<strong> "<?php echo $prod_description[$myvariable] ?>"</strong>
+					</p>
+					<br> </br>
+					<br> </br>
+
+					<?php
+					}
+				}
+
+				?>
 
                 <?php
                 $counter = $counter + 1;
