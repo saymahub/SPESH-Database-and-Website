@@ -87,6 +87,10 @@
                 <b> </b>
                 <b> </b>
 
+                <p style = "color: #6A475A; position:relative; font-size:24px; left:100px; top: 40px;"  class = "adjust-line-height"> 
+                    <strong> <?php echo $prod_price[$myvariable] ?></strong>
+                </p>
+
                 <p style = "color: #6A475A; position:relative; font-size:18px; left:300px; top: -70px;"  class = "adjust-line-height"> 
                     <strong> "<?php echo $prod_country[$myvariable] ?>"</strong>
                 </p>
