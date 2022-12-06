@@ -214,7 +214,7 @@ hr{
 		$prod_img = [];
 		$prod_name = [];
 		$prod_price = [];
-		$sql = " SELECT * FROM product WHERE bought = 'no'";
+		$sql = " SELECT * FROM product";
 		$query = mysqli_query($mysqli, $sql);
     	$counter = 0;
     	$totalPrice = 0;
