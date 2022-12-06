@@ -25,7 +25,7 @@ body{
 	height: 15%;
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
+	align-items: center;	
 }
 
 .Heading{
@@ -67,6 +67,7 @@ body{
 	font-family: 'Open Sans';
 	font-weight: 800;
 	color: #202020;
+	line-height: 1em;
 }
 .subtitle{
 	line-height: 10px;
@@ -227,7 +228,7 @@ hr{
 	<div class="CartContainer">
 			<div class="Header">
 				<h3 class="Heading">Shopping Cart</h3>
-				<h5 class="Action">Remove all</h5>
+
 			</div>
 	<?php
 		if ($selection1 >= 1){
@@ -241,8 +242,7 @@ hr{
 				</div>
 				<div class="prices">
 					<div class="amount"><?php echo $prod_price[$selection1] ?></div>
-					<div class="save"><u>Save for later</u></div>
-					<div class="remove"><u>Remove</u></div>
+
 				</div>
 			</div>
 			<?php
@@ -262,8 +262,7 @@ hr{
 				</div>
 				<div class="prices">
 					<div class="amount"><?php echo $prod_price[$selection2] ?></div>
-					<div class="save"><u>Save for later</u></div>
-					<div class="remove"><u>Remove</u></div>
+
 				</div>
 			</div>
 			<?php
@@ -282,8 +281,7 @@ hr{
 				</div>
 				<div class="prices">
 					<div class="amount"><?php echo $prod_price[$selection3] ?></div>
-					<div class="save"><u>Save for later</u></div>
-					<div class="remove"><u>Remove</u></div>
+
 				</div>
 			</div>
 			<?php
