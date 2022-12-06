@@ -27,12 +27,51 @@
 
     </style>
     </head>
-    <title>Contact Distributor</title>
+    <title>Contact Distributor </title>
 	<body>
         <h1 style="color: #451C29; font-size:60px; text-align:center;">SPESH Market! </h1>
         <p style = "color: #451C29; text-align:center; font-size:30px;" > <strong>Contact distributor</strong><p>
         
-        
+        <form action="ContactDistributor.php" method="post">
+		<div>
+			<label>Enter your email:</label>
+			<input type="text" name="Admin email"/>
+            <br></br>
+            <label>Enter distributor email:</label>
+			<input type="text" name="Distributor email"/>
+            <br></br>
+            <label>Message:</label>
+			<input type="text" name="Message"/>
+            <br></br>
+            <!-- <input type="submit" value="Send email" /> -->
+
+		</div>
+        </form>
+        <html>
+        <head>
+        <script>
+            function myFunction() {
+                var x;
+                var r = confirm("Press OK to send or Cancel.");
+                if (r == true) {
+                x = "The email has been sent.";
+            }
+                else {
+                x = "The email has been cancelled.";
+            }
+            document.getElementById("demo").innerHTML = x;
+        }
+        </script>
+        </head>
+        <body>
+        <?php
+        ?>
+        <button onclick="myFunction()">Send email</button>
+        <p id="demo"></p>
+        </body>
+        </html>
+
+
     </body>
 </html>
 
