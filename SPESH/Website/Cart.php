@@ -185,6 +185,11 @@ hr{
 
 </style>
 <body>
+	<?php 
+		$selection1 = $_POST["selection1"];
+		$selection2 = $_POST["selection2"];
+		$selection3 = $_POST["selection3"];
+	?>
    <div class="CartContainer">
    	   <div class="Header">
    	   	<h3 class="Heading">Shopping Cart</h3>
