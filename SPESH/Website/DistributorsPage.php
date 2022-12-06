@@ -39,44 +39,72 @@
 	<h1 style="color: #451C29; font-size:60px; text-align:center;">SPESH Market! </h1>
 	
 	<h2 style="color: #451C29; font-size:30px; text-align:center;" >Distributor Info</h2>
+  <a href="Login.php"><input type="button" value="Back" style="float: left;"></a>
+  <?php
+            // Username is root
+            $user = 'root';
+            $password = '';
+            
+            $database = 'speshdb';
+            
+            // Server is localhost with
+            // port number 3306
+            $servername='localhost:3306';
+            $mysqli = new mysqli($servername, $user,
+                            $password, $database);
+            
+            // Checking for connections
+            if ($mysqli->connect_error) {
+                die('Connect Error (' .
+                $mysqli->connect_errno . ') '.
+                $mysqli->connect_error);
+            }
+            
+            $sql = " SELECT * FROM distributer";
+            $query = mysqli_query($mysqli, $sql);
+                        $prod = mysqli_fetch_array($query);
+            
+                        
+            $myvariable = 0;
+            $prod_id = 0;
+            $first_name = [];
+            $last_name = [];
+            $email = [];
+            $country = [];
+            $phone = [];
+            $counter = 1;
+            while($prod_row = mysqli_fetch_array($query)){
+                $prod_id = $prod_row['id'];
+                $first_name[$myvariable] = $prod_row['first name'];
+                $last_name[$myvariable] = $prod_row['last name'];
+                $email[$myvariable] = $prod_row['email'];
+                $prod_img[$myvariable] = $prod_row['country'];
+                $phone[$myvariable] = $prod_row['phone'];
 
-<div class="row">
-  <div class="column">
-    <h2 style="color: #4F2E38;">Shelby Marcs</h2>
-    <p>shelma12@gmail.com</p>
-    <p>327 339 9302</p>
-    <img src="https://upload.wikimedia.org/wikipedia/en/d/da/Matt_LeBlanc_as_Joey_Tribbiani.jpg" width="150" height ="150" class="center"{margin-right: 30%}>
+                //echo $precio_digital;
+                ?>
+
+    <div class="row">
+      <div class="column">
+        <h2 style="color: #4F2E38;"><?php echo $first_name[$myvariable] ?><?php echo $last_name[$myvariable] ?></h2>
+        <p><?php echo $email[$myvariable] ?></p>
+        <p>327 339 9302</p>
+        <img src="https://upload.wikimedia.org/wikipedia/en/d/da/Matt_LeBlanc_as_Joey_Tribbiani.jpg" width="150" height ="150" class="center"{margin-right: 30%}>
+        <br></br>
+        <a href="ContactDistributor.php"><input type="button" value="Contact" style="float: left;"></a>
+      </div>
+  
+    </div>
     <br></br>
-    <a href="ContactDistributor.php"><input type="button" value="Contact" style="float: left;"></a>
-  </div>
-  <div class="column">
-    <h2 style="color: #4F2E38;">Caleba Johnson</h2>
-    <p>cjleba43@outlook.com</p>
-    <p>823 349 6352</p>
-    <img src="https://s2.r29static.com/bin/entry/099/0,71,2000,2000/x,80/1656776/image.jpg" width="150" height ="150" class="center"{margin-right: 30%}>
     <br></br>
-    <a href="ContactDistributor.php"><input type="button" value="Contact" style="float: left;"></a>
-  </div>
-  <div class="column">
-    <h2 style="color: #4F2E38;">Kyle Lee</h2>
-    <p>23leekee@gmail.com</p>
-    <p>394 849 2039</p>
-    <img src="https://mediamass.net/jdd/public/documents/celebrities/6621.jpg" width="150" height ="150" class="center"{margin-right: 30%}>
-    <br></br>
-    <a href="ContactDistributor.php"><input type="button" value="Contact" style="float: left;"></a>
-  </div>
-  <div class="column" >
-    <h2 style="color: #4F2E38;">Troy Bolton</h2>
-    <p>basket.champ@yahoo.com</p>
-    <p>587 829 1920</p>
-    <img src="https://fotografias.antena3.com/clipping/cmsimages01/2018/10/18/226A74E0-C67D-40BA-BD22-9EE8E9909F51/69.jpg?crop=1:1,smart&width=1200&height=1200&optimize=low&format=webply" width="150" height ="150" class="center"{margin-right: 30%}>
-    <br></br>
-    <a href="ContactDistributor.php"><input type="button" value="Contact" style="float: left;"></a>
-  </div>
-</div>
-<br></br>
-<br></br>
-<a href="Login.php"><input type="button" value="Back" style="float: left;"></a>
-		
+    <?php
+                $counter = $counter + 1;
+            }
+            
+
+            
+        $mysqli->close();
+        ?> 
+        
 </body>
 </html>
