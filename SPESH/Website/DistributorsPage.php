@@ -39,7 +39,7 @@
 	<h1 style="color: #451C29; font-size:60px; text-align:center;">SPESH Market! </h1>
 	
 	<h2 style="color: #451C29; font-size:30px; text-align:center;" >Distributor Info</h2>
-
+  <a href="Login.php"><input type="button" value="Back" style="float: left;"></a>
   <?php
             // Username is root
             $user = 'root';
@@ -97,7 +97,6 @@
     </div>
     <br></br>
     <br></br>
-    <a href="Login.php"><input type="button" value="Back" style="float: left;"></a>
     <?php
                 $counter = $counter + 1;
             }
