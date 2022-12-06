@@ -187,9 +187,8 @@ hr{
 </style>
 <body>
 	<?php 
-		$selection1 = $_POST["selection1"];
-		$selection2 = $_POST["selection2"];
-		$selection3 = $_POST["selection3"];
+		$country= $_POST["country"];
+		$category = $_POST["category"];
 
 		// Username is root
 		$user = 'root';
