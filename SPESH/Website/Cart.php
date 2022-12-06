@@ -216,7 +216,7 @@ hr{
 		$prod_price = [];
 		$sql = " SELECT * FROM product WHERE bought = 'no'";
 		$query = mysqli_query($mysqli, $sql);
-    	
+    	$counter = 0;
 
 		while ($prod_row = mysqli_fetch_array($query)) {
 			$prod_img[$myvariable] = $prod_row['image url'];
@@ -232,6 +232,7 @@ hr{
 			</div>
 	<?php
 		if ($selection1 >= 1){
+	    	$counter = $counter + 1;
 			?>	
 			<div class="Cart-Items">
 				<div class="image-box">
@@ -252,6 +253,7 @@ hr{
 
    <?php
 		if ($selection2 >= 1){
+			$counter = $counter + 1;
 			?>
 			<div class="Cart-Items">
 				<div class="image-box">
@@ -271,6 +273,7 @@ hr{
 	  
 	<?php
 		if ($selection3 >= 1){
+			$counter = $counter + 1;
 			?>
 			<div class="Cart-Items">
 				<div class="image-box">
@@ -294,20 +297,22 @@ hr{
    	 <div class="total">
    	 	<div>
    	 		<div class="Subtotal">Sub-Total</div>
-   	 		<div class="items">2 items</div>
+			<?php
+            	$counter .= " items";
+			?>
+   	 		<div class="items"><?php echo $counter?></div>
    	 	</div>
 		<?php
 
 			$priceOne = $prod_price[$selection1];
 			$priceOne = ltrim($priceOne, '$');
 			$priceTwo = $prod_price[$selection2];
-			$priceOne = ltrim($priceOne, '$');
-			$priceOne = $prod_price[$selection3];
-			$priceOne = ltrim($priceOne, '$');
-			$totalPrice = floatval($priceOne);
-			echo $onePrice;
+			$priceTwo = ltrim($priceTwo, '$');
+			$priceThree = $prod_price[$selection3];
+			$priceThree = ltrim($priceThree, '$');
+			$totalPrice = floatval($priceOne) + floatval($priceTwo) + floatval($priceThree);
 		?>
-   	 	<div class="total-amount"><?php echo "16" ?></div>
+   	 	<div class="total-amount"><?php echo $totalPrice ?></div>
    	 </div>
    	 <button class="button">Checkout</button></div>
    </div>
