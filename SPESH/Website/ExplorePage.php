@@ -170,7 +170,7 @@
             <input type="submit" value="Confirm Search" />
             <br></br>
             <label>Search By Category:</label>
-			<input type="text" name="selection2"/>
+			<input type="text" name="category"/>
             <br></br>
             <input type="submit" value="Confirm Search" />
 		</div>
