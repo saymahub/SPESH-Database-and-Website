@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 06, 2022 at 09:50 PM
+-- Generation Time: Dec 06, 2022 at 10:08 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -85,14 +85,14 @@ CREATE TABLE `distributer` (
 --
 
 INSERT INTO `distributer` (`id`, `first name`, `last name`, `email`, `country`, `phone`) VALUES
-(1, 'Phil', 'Simpson', 'phil@distrib.ca', 'Japan', '1847583920'),
-(2, 'Jasmeender', 'Simpson', 'Jasmeender@distrib.ca', 'Japan', '2649017284'),
-(3, 'Siwon', 'Choi', 'Siwon@distrib.ca', 'Japan', '7401549174'),
-(4, 'George', 'Simpson', 'george@distrib.ca', 'Japan', '9102748394'),
-(5, 'Daniel', 'Simpson', 'daniel@distrib.ca', 'Japan', '6728390940'),
-(6, 'Sangeet', 'Paramjeet', 'sangeet@distrib.ca', 'Japan', '5678902345'),
-(7, 'Barthalomew', 'Simpson', 'Barthalomew@distrib.ca', 'Japan', '8764983900'),
-(8, 'Putin', 'Simpson', 'putin@distrib.ca', 'Japan', '5367383988');
+(1, 'Phil', 'Simpson', 'phil@distrib.ca', 'Japan', '184 758 3920'),
+(2, 'Jasmeender', 'Simpson', 'Jasmeender@distrib.ca', 'Japan', '264 901 7284'),
+(3, 'Siwon', 'Choi', 'Siwon@distrib.ca', 'Japan', '740 154 9174'),
+(4, 'George', 'Simpson', 'george@distrib.ca', 'Japan', '910 274 8394'),
+(5, 'Daniel', 'Simpson', 'daniel@distrib.ca', 'Japan', '672 839 0940'),
+(6, 'Sangeet', 'Paramjeet', 'sangeet@distrib.ca', 'Japan', '567 890 2345'),
+(7, 'Barthalomew', 'Simpson', 'Barthalomew@distrib.ca', 'Japan', '876 498 3900'),
+(8, 'Putin', 'Simpson', 'putin@distrib.ca', 'Japan', '536 738 3988');
 
 -- --------------------------------------------------------
 
