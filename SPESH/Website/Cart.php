@@ -4,7 +4,7 @@
 body{
 	margin: 0;
 	padding: 0;
-	background: linear-gradient(to bottom right, #9E7E88, #FAFCFF);
+	background: linear-gradient(to bottom right, #9E7E88, #FFFFFF);
 	height: 100vh;
 	display: flex;
 	justify-content: center;
@@ -174,7 +174,7 @@ hr{
 	width: 100%;
 	height: 40px;
 	border: none;
-	background: linear-gradient(to bottom right, #B8D7FF, #8EB7EB);
+	background: linear-gradient(to bottom right, #875062, #FFFFFF);
 	border-radius: 20px;
 	cursor: pointer;
 	font-size: 16px;
@@ -196,7 +196,28 @@ hr{
    	   	  	<img src="images/apple.png" style={{ height="120px" }} />
    	   	  </div>
    	   	  <div class="about">
-   	   	  	<h1 class="title">Apple Juice</h1>
+   	   	  	<h1 class="title">INHERIT ITEM</h1>
+   	   	  	<h3 class="subtitle">250ml</h3>
+   	   	  	<img src="images/veg.png" style={{ height="30px" }}/>
+   	   	  </div>
+   	   	  <div class="counter">
+   	   	  	<div class="btn">+</div>
+   	   	  	<div class="count">300</div>
+   	   	  	<div class="btn">-</div>
+   	   	  </div>
+   	   	  <div class="prices">
+   	   	  	<div class="amount">INHERIT PRICES</div>
+   	   	  	<div class="save"><u>Save for later</u></div>
+   	   	  	<div class="remove"><u>Remove</u></div>
+   	   	  </div>
+   	   </div>
+
+          <div class="Cart-Items">
+   	   	  <div class="image-box">
+   	   	  	<img src="images/apple.png" style={{ height="120px" }} />
+   	   	  </div>
+   	   	  <div class="about">
+   	   	  	<h1 class="title">INHERIT ITEM</h1>
    	   	  	<h3 class="subtitle">250ml</h3>
    	   	  	<img src="images/veg.png" style={{ height="30px" }}/>
    	   	  </div>
@@ -206,28 +227,7 @@ hr{
    	   	  	<div class="btn">-</div>
    	   	  </div>
    	   	  <div class="prices">
-   	   	  	<div class="amount">$2.99</div>
-   	   	  	<div class="save"><u>Save for later</u></div>
-   	   	  	<div class="remove"><u>Remove</u></div>
-   	   	  </div>
-   	   </div>
-
-   	   <div class="Cart-Items pad">
-   	   	  <div class="image-box">
-   	   	  	<img src="images/grapes.png" style={{ height="120px" }} />
-   	   	  </div>
-   	   	  <div class="about">
-   	   	  	<h1 class="title">Grapes Juice</h1>
-   	   	  	<h3 class="subtitle">250ml</h3>
-   	   	  	<img src="images/veg.png" style={{ height="30px" }}/>
-   	   	  </div>
-   	   	  <div class="counter">
-   	   	  	<div class="btn">+</div>
-   	   	  	<div class="count">1</div>
-   	   	  	<div class="btn">-</div>
-   	   	  </div>
-   	   	  <div class="prices">
-   	   	  	<div class="amount">$3.19</div>
+   	   	  	<div class="amount">INHERIT PRICES</div>
    	   	  	<div class="save"><u>Save for later</u></div>
    	   	  	<div class="remove"><u>Remove</u></div>
    	   	  </div>
