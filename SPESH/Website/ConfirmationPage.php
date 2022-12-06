@@ -21,8 +21,8 @@
 	
 	<h2 style="color: #451C29; font-size:30px; text-align:center;" >Thank you for Shopping at Spesh!</h2>
 
-	<h2 style="color: #451C29; font-size:20px; text-align:center;" >You can expect your package to arrive NEVER</h2>
-    <h2 style="color: #451C29; font-size:15px; text-align:center;" >You fool. stupid idiot. why did you order things on such sketchy website. have you no shame</h2>
+	<h2 style="color: #451C29; font-size:20px; text-align:center;" >Your package will arrive when we become real software engineers.</h2>
+    <h2 style="color: #451C29; font-size:15px; text-align:center;" >why did you order things on such sketchy website. have you no shame</h2>
 
     <a href="HomePage.php"><input type="button" value="Return Home" style="float: left;"></a>
 		
