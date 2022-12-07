@@ -169,14 +169,14 @@
         <br></br>
         <br></br>
         <br></br>
-			<label>Search By Country:</label>
-			<input type="text" name="country"/>           
+			<label>Search By Artist:</label>
+			<input type="text" name="artist"/>           
             <label>OR</label>
             <br></br>
             <input type="submit" value="Confirm Search" />
             <br></br>
-            <label>Search By Category:</label>
-			<input type="text" name="category"/>
+            <label>Search By Era:</label>
+			<input type="text" name="era"/>
             <br></br>
             <input type="submit" value="Confirm Search" />
 	
