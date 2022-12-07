@@ -173,8 +173,7 @@
 			<input type="text" name="category"/>
             <br></br>
             <input type="submit" value="Confirm Search" />
-		</div>
-        </form>
+	
         <form action="Cart.php" method="post">
 		<div>
         <br></br>

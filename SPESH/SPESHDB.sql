@@ -171,7 +171,7 @@ INSERT INTO `shipping deets` (`id`, `trackingnum`, `ETA`) VALUES
 --
 
 CREATE TABLE `users` (
-  `id` int(10) NOT NULL,
+  `id` int(10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
   `username` varchar(200) NOT NULL,
   `email` varchar(200) NOT NULL,
   `card` varchar(200) DEFAULT NULL,
@@ -232,9 +232,9 @@ ALTER TABLE `shipping deets`
 --
 -- Indexes for table `users`
 --
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `email` (`email`);
+-- ALTER TABLE `users`
+--   ADD PRIMARY KEY (`id`),
+--   ADD UNIQUE KEY `email` (`email`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -254,7 +254,7 @@ ALTER TABLE `country`
 
 --
 -- AUTO_INCREMENT for table `distributer`
---
+
 ALTER TABLE `distributer`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
@@ -270,12 +270,12 @@ ALTER TABLE `product`
 ALTER TABLE `shipping deets`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
---
--- AUTO_INCREMENT for table `users`
---
-ALTER TABLE `users`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
-COMMIT;
+-- --
+-- -- AUTO_INCREMENT for table `users`
+-- --
+-- ALTER TABLE `users`
+--   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
+-- COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
