@@ -85,14 +85,14 @@ CREATE TABLE `distributer` (
 --
 
 INSERT INTO `distributer` (`id`, `first name`, `last name`, `email`, `country`, `phone`) VALUES
-(1, 'Phil', 'Simpson', 'email', 'Japan', '4039882602'),
-(2, 'Jasmeender', 'Simpson', 'email', 'Japan', '4039882602'),
-(3, 'Siwon', 'Choi', 'email', 'Japan', '4039882602'),
-(4, 'George', 'Simpson', 'email', 'Japan', '4039882602'),
-(5, 'Daniel', 'Simpson', 'email', 'Japan', '4039882602'),
-(6, 'Sangeet', 'Paramjeet', 'email', 'Japan', '4039882602'),
-(7, 'Barthalomew', 'Simpson', 'email', 'Japan', '4039882602'),
-(8, 'Putin', 'Simpson', 'email', 'Japan', '4039882602');
+(1, 'Phil', 'Simpson', 'phil@distrib.ca', 'Japan', '184 758 3920'),
+(2, 'Jasmeender', 'Simpson', 'Jasmeender@distrib.ca', 'Japan', '264 901 7284'),
+(3, 'Siwon', 'Choi', 'Siwon@distrib.ca', 'Japan', '740 154 9174'),
+(4, 'George', 'Simpson', 'george@distrib.ca', 'Japan', '910 274 8394'),
+(5, 'Daniel', 'Simpson', 'daniel@distrib.ca', 'Japan', '672 839 0940'),
+(6, 'Sangeet', 'Paramjeet', 'sangeet@distrib.ca', 'Japan', '567 890 2345'),
+(7, 'Barthalomew', 'Simpson', 'Barthalomew@distrib.ca', 'Japan', '876 498 3900'),
+(8, 'Putin', 'Simpson', 'putin@distrib.ca', 'Japan', '536 738 3988');
 
 -- --------------------------------------------------------
 
