@@ -101,6 +101,52 @@
 	</div>
 	</div>
 
+	<div class="row">
+	<div class="column">
+    <h2 style = "color: #4F2E38">New Here? Sign Up Now!</h2>
+	<div class="row">
+            <div class="column">
+                <form action="SignUp.php" method="post">
+                    <div>
+                        <label>Username:</label>
+                        <input type="text" name="newuser"/>
+                    </div>
+                    <div>
+                        <label>Email:</label>
+                        <input type="text" name="newemail"/>
+                    </div>
+                    <div>
+                        <label>Card Number:</label>
+                        <input type="text" name="newcardnum"/>
+                    </div>
+                    <div>
+                        <label>CVV:</label>
+                        <input type="text" name="newcvv"/>
+                    </div>
+                    <div>
+                        <label>Expiration Date:</label>
+                        <input type="text" name="newexpiry"/>
+                    </div>
+                    <div>
+                        <label>Address:</label>
+                        <input type="text" name="newaddy"/>
+                    </div>
+                    <div>
+                        <label>Password: </label>
+                        <input type="text" name="newpass"/>
+                        <input type="submit" value="Sign Up" />
+                    </div>
+                        
+                </form>
+                </div>
+        </div>   
+		</div>
+		
+	</div>
+	</div>
+
+
+
 	
 	
 	

@@ -51,17 +51,31 @@
 	<body>
 
 		<h1 style="color: #451C29; font-size:60px; text-align:center;">SPESH Market! </h1>
+        <form action="Cart.php" method="post">
+                    <div>
+                        <br></br>
+                        <label>OR</label>
+                        <br></br>
+                        <label>Selection 1:</label>
+                        <input type="text" name="selection1"/>
+                        <label>Selection 2:</label>
+                        <input type="text" name="selection2"/>
+                        <label>Selection 3:</label>
+                        <input type="text" name="selection3"/>
+                        <input type="submit" value="Confirm Selection" />
+                    </div>
+                </form>
         <?php
-			$countryFlag = 0;
-			$categoryFlag = 0;
-			if($_POST["country"] != null){
-				$country= $_POST["country"];
-				$countryFlag = 1;
+			$artistFlag = 0;
+			$eraFlag = 0;
+			if($_POST["artist"] != null){
+				$artist= $_POST["artist"];
+				$artistFlag = 1;
 			}
 			
-			else{
-				$category = $_POST["category"];
-				$categoryFlag = 1;
+			else if ($_POST["era"] != null){
+				$era = $_POST["era"];
+				$eraFlag = 1;
 			}
 			
             // Username is root
@@ -92,26 +106,27 @@
             $prod_id = 0;
             $prod_name = [];
             $prod_country = [];
-            $prod_category = [];
+            $prod_era = [];
             $prod_price = [];
             $prod_img = [];
-            $prod_description = [];
+            $prod_artist = [];
             $counter = 1;
             while($prod_row = mysqli_fetch_array($query)){
                 $prod_id = $prod_row['id'];
                 $prod_name[$myvariable] = $prod_row['prod name'];
                 $prod_country[$myvariable] = $prod_row['country'];
-                $prod_category[$myvariable] = $prod_row['category'];
+                $prod_era[$myvariable] = $prod_row['era'];
                 $prod_price[$myvariable] = $prod_row['price'];
                 $prod_img[$myvariable] = $prod_row['image url'];
-                $prod_description[$myvariable] = $prod_row['description'];
+                $prod_artist[$myvariable] = $prod_row['artist'];
 
                 //echo $precio_digital;
                 ?>
                 <!-- <img src= "<?php echo $prod_img[$myvariable] ?>" alt="test" height=200/> -->
+                
                 <?php
-				if($countryFlag == 1){
-					if($prod_country[$myvariable] == $country && $_POST["country"] != null){
+				if($artistFlag == 1){
+					if($prod_artist[$myvariable] == $artist && $_POST["artist"] != null){
 					?>
 				
 					<p style = "color: #6A475A;position:relative; font-size:30px; left: 300px; top: 90px;" class = "adjust-line-height"> 
@@ -131,7 +146,7 @@
 					</p>
 
 					<p style = "color: #6A475A; position:relative; font-size:18px; left:300px; top: -70px;"  class = "adjust-line-height"> 
-						<strong> "<?php echo $prod_description[$myvariable] ?>"</strong>
+						<strong> "<?php echo $prod_artist[$myvariable] ?>"</strong>
 					</p>
 					<br> </br>
 					<br> </br>
@@ -140,8 +155,8 @@
 					}
 				}
 
-				else if($categoryFlag == 1){
-					if($prod_category[$myvariable] == $category && $_POST["category"] != null){
+				else if($eraFlag == 1){
+					if($prod_era[$myvariable] == $era && $_POST["era"] != null){
 					?>
 				
 					<p style = "color: #6A475A;position:relative; font-size:30px; left: 300px; top: 90px;" class = "adjust-line-height"> 
@@ -161,7 +176,7 @@
 					</p>
 
 					<p style = "color: #6A475A; position:relative; font-size:18px; left:300px; top: -70px;"  class = "adjust-line-height"> 
-						<strong> "<?php echo $prod_description[$myvariable] ?>"</strong>
+						<strong> "<?php echo $prod_artist[$myvariable] ?>"</strong>
 					</p>
 					<br> </br>
 					<br> </br>

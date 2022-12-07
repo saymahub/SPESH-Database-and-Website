@@ -50,7 +50,8 @@
 	<body>
 
 		<h1 style="color: #451C29; font-size:60px; text-align:center;">SPESH Market! </h1>
-		<p style = "text-align:center; font-size:20px;"> Explore the multitude of products SPESH has to offer!</p>
+		<p style = "text-align:center; font-size:20px;"> Explore the various paintings SPESH has to offer!</p>
+        <p style = "text-align:center; font-size:15px;"> Customers can only purchase a maximum of 3 paintings per transaction!</p>
 		<a href="Login.php"><input type="button" value="Back" style="position:relative; font-size:12px; left: 20px; top: -170px;"></a>
         <form action="SpecificSearch.php" method="post">
 		<div>
@@ -83,19 +84,19 @@
             $prod_id = 0;
             $prod_name = [];
             $prod_country = [];
-            $prod_category = [];
+            $prod_era = [];
             $prod_price = [];
             $prod_img = [];
-            $prod_description = [];
+            $prod_artist = [];
             $counter = 1;
             while($prod_row = mysqli_fetch_array($query)){
                 $prod_id = $prod_row['id'];
                 $prod_name[$myvariable] = $prod_row['prod name'];
                 $prod_country[$myvariable] = $prod_row['country'];
-                $prod_category[$myvariable] = $prod_row['category'];
+                $prod_era[$myvariable] = $prod_row['era'];
                 $prod_price[$myvariable] = $prod_row['price'];
                 $prod_img[$myvariable] = $prod_row['image url'];
-                $prod_description[$myvariable] = $prod_row['description'];
+                $prod_artist[$myvariable] = $prod_row['artist'];
 
                 //echo $prod_country[$myvariable];
                 $myvariable = $myvariable + 1;
@@ -109,9 +110,9 @@
             //     $iter++;
             // }
 
-            $uniqCountries = array_unique($prod_country);
+            $uniqArtist = array_unique($prod_artist);
           
-            $uniqCategories = array_unique($prod_category);
+            $uniqEra = array_unique($prod_era);
             
             
            
@@ -119,15 +120,15 @@
 
         <div class="row">
         <div class="column">
-            <h2>Countries:</h2>
+            <h2>Artists:</h2>
             <?php
             $iter = 0;
-            while($iter < sizeof($uniqCountries)){
-            echo $uniqCountries[$iter];
+            while($iter < sizeof($uniqArtist)){
+            echo $uniqArtist[$iter];
             ?>
             <br></br>
             <?php
-            if($iter == 3 || $iter == 13){
+            if($iter == 5){
                 $iter = $iter + 2;
             }
             
@@ -137,11 +138,11 @@
     
         </div>
         <div class="column">
-        <h2>Categories:</h2>
+        <h2>Era:</h2>
         <?php
             $iter = 0;
-            while($iter < sizeof($uniqCategories)){
-            echo $uniqCategories[$iter];
+            while($iter < sizeof($uniqEra)){
+            echo $uniqEra[$iter];
             ?>
             <br></br>
             <?php
@@ -163,18 +164,22 @@
         <br></br>
         <br></br>
         <br></br>
-			<label>Search By Country:</label>
-			<input type="text" name="country"/>           
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+			<label>Search By Artist:</label>
+			<input type="text" name="artist"/>           
             <label>OR</label>
             <br></br>
             <input type="submit" value="Confirm Search" />
             <br></br>
-            <label>Search By Category:</label>
-			<input type="text" name="category"/>
+            <label>Search By Era:</label>
+			<input type="text" name="era"/>
             <br></br>
             <input type="submit" value="Confirm Search" />
-		</div>
-        </form>
+	
         <form action="Cart.php" method="post">
 		<div>
         <br></br>
@@ -209,7 +214,7 @@
                 $mysqli->connect_error);
             }
             
-            $sql = " SELECT * FROM product";
+            $sql = " SELECT * FROM product WHERE bought = 'no'";
             $query = mysqli_query($mysqli, $sql);
                         $prod = mysqli_fetch_array($query);
             
@@ -220,7 +225,7 @@
             $prod_country = [];
             $prod_price = [];
             $prod_img = [];
-            $prod_description = [];
+            $prod_artist = [];
             $counter = 1;
             while($prod_row = mysqli_fetch_array($query)){
                 $prod_id = $prod_row['id'];
@@ -228,17 +233,17 @@
                 $prod_country[$myvariable] = $prod_row['country'];
                 $prod_price[$myvariable] = $prod_row['price'];
                 $prod_img[$myvariable] = $prod_row['image url'];
-                $prod_description[$myvariable] = $prod_row['description'];
+                $prod_artist[$myvariable] = $prod_row['artist'];
 
                 //echo $precio_digital;
                 ?>
                 <!-- <img src= "<?php echo $prod_img[$myvariable] ?>" alt="test" height=200/> -->
                 
-                <p style = "color: #6A475A ;position:relative; font-size:30px; left: 300px; top: 90px;" class = "adjust-line-height"> 
+                <p style = "color: #6A475A;position:relative; font-size:30px; left: 450px; top: 90px;" class = "adjust-line-height"> 
                     <strong> <?php echo $counter ?></strong><strong> <?php echo $prod_name[$myvariable] ?></strong>
                 </p>
                 <img src= "<?php echo $prod_img[$myvariable] ?>" alt="test"
-                    style = "width:200px; position:relative; left:60px; top: 30px;">
+                    style = "width:300px; position:relative; left:60px; top: 30px;">
                 <b> </b>
                 <b> </b>
 
@@ -246,12 +251,12 @@
                     <strong> <?php echo $prod_price[$myvariable] ?></strong>
                 </p>
 
-                <p style = "color: #6A475A; position:relative; font-size:18px; left:300px; top: -70px;"  class = "adjust-line-height"> 
+                <!-- <p style = "color: #6A475A; position:relative; font-size:18px; left:300px; top: -70px;"  class = "adjust-line-height"> 
                     <strong> "<?php echo $prod_country[$myvariable] ?>"</strong>
-                </p>
+                </p> -->
 
-                <p style = "color: #6A475A; position:relative; font-size:18px; left:300px; top: -70px;"  class = "adjust-line-height"> 
-                    <strong> "<?php echo $prod_description[$myvariable] ?>"</strong>
+                <p style = "color: #6A475A; position:relative; font-size:18px; left:450px; top: -70px;"  class = "adjust-line-height"> 
+                    <strong> "<?php echo $prod_artist[$myvariable] ?>"</strong>
                 </p>
                 <br> </br>
                 <br> </br>
