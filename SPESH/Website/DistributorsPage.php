@@ -18,9 +18,9 @@
     /* Create four equal columns that floats next to each other */
     .column {
         float: left;
-        width: 25%;
+        /* width: 25%; */
         padding: 10px;
-        height: 300px; /* Should be removed. Only for demonstration */
+        /* height: 300px; Should be removed. Only for demonstration */
     }
 
     /* Clear floats after the columns */
@@ -39,7 +39,7 @@
 	<h1 style="color: #451C29; font-size:60px; text-align:center;">SPESH Market! </h1>
 	
 	<h2 style="color: #451C29; font-size:30px; text-align:center;" >Distributor Info</h2>
-  <a href="Login.php"><input type="button" value="Back" style="float: left;"></a>
+  <a href="Login.php"><input type="button" value="Back" style="float: left; ;position:relative; top: -60px;"></a>
   <?php
             // Username is root
             $user = 'root';
@@ -84,7 +84,7 @@
                 //echo $precio_digital;
                 ?>
 
-    <div class="row">
+    
       <div class="column">
         <h2 style="color: #4F2E38;"><?php echo $first_name[$myvariable] ?> <?php echo " " ?> <?php echo $last_name[$myvariable] ?></h2>
         <p><?php echo $email[$myvariable] ?></p>
@@ -94,7 +94,6 @@
         <a href="ContactDistributor.php"><input type="button" value="Contact" style="float: left;"></a>
       </div>
   
-    </div>
     <br></br>
     <br></br>
     <?php

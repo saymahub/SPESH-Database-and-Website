@@ -31,9 +31,10 @@
 	<body>
         <h1 style="color: #451C29; font-size:60px; text-align:center;">SPESH Market! </h1>
         <p style = "color: #451C29; text-align:center; font-size:30px;" > <strong>Contact distributor</strong><p>
-        
+        <a href="DistributorsPage.php"><input type="button" value="Back" style="float: left; ;position:relative; top: -60px;"></a>
         <form action="ContactDistributor.php" method="post">
 		<div>
+        <br></br>
 			<label>Enter your email:</label>
 			<input type="text" name="Admin email"/>
             <br></br>
