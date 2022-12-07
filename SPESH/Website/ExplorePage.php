@@ -83,19 +83,19 @@
             $prod_id = 0;
             $prod_name = [];
             $prod_country = [];
-            $prod_category = [];
+            $prod_era = [];
             $prod_price = [];
             $prod_img = [];
-            $prod_description = [];
+            $prod_artist = [];
             $counter = 1;
             while($prod_row = mysqli_fetch_array($query)){
                 $prod_id = $prod_row['id'];
                 $prod_name[$myvariable] = $prod_row['prod name'];
                 $prod_country[$myvariable] = $prod_row['country'];
-                $prod_category[$myvariable] = $prod_row['category'];
+                $prod_category[$myvariable] = $prod_row['era'];
                 $prod_price[$myvariable] = $prod_row['price'];
                 $prod_img[$myvariable] = $prod_row['image url'];
-                $prod_description[$myvariable] = $prod_row['description'];
+                $prod_description[$myvariable] = $prod_row['artist'];
 
                 //echo $prod_country[$myvariable];
                 $myvariable = $myvariable + 1;
@@ -220,7 +220,7 @@
             $prod_country = [];
             $prod_price = [];
             $prod_img = [];
-            $prod_description = [];
+            $prod_artist = [];
             $counter = 1;
             while($prod_row = mysqli_fetch_array($query)){
                 $prod_id = $prod_row['id'];
@@ -228,17 +228,17 @@
                 $prod_country[$myvariable] = $prod_row['country'];
                 $prod_price[$myvariable] = $prod_row['price'];
                 $prod_img[$myvariable] = $prod_row['image url'];
-                $prod_description[$myvariable] = $prod_row['description'];
+                $prod_artist[$myvariable] = $prod_row['artist'];
 
                 //echo $precio_digital;
                 ?>
                 <!-- <img src= "<?php echo $prod_img[$myvariable] ?>" alt="test" height=200/> -->
                 
-                <p style = "color: #6A475A;position:relative; font-size:30px; left: 300px; top: 90px;" class = "adjust-line-height"> 
+                <p style = "color: #6A475A;position:relative; font-size:30px; left: 450px; top: 90px;" class = "adjust-line-height"> 
                     <strong> <?php echo $counter ?></strong><strong> <?php echo $prod_name[$myvariable] ?></strong>
                 </p>
                 <img src= "<?php echo $prod_img[$myvariable] ?>" alt="test"
-                    style = "width:200px; position:relative; left:60px; top: 30px;">
+                    style = "width:300px; position:relative; left:60px; top: 30px;">
                 <b> </b>
                 <b> </b>
 
@@ -246,12 +246,12 @@
                     <strong> <?php echo $prod_price[$myvariable] ?></strong>
                 </p>
 
-                <p style = "color: #6A475A; position:relative; font-size:18px; left:300px; top: -70px;"  class = "adjust-line-height"> 
+                <!-- <p style = "color: #6A475A; position:relative; font-size:18px; left:300px; top: -70px;"  class = "adjust-line-height"> 
                     <strong> "<?php echo $prod_country[$myvariable] ?>"</strong>
-                </p>
+                </p> -->
 
-                <p style = "color: #6A475A; position:relative; font-size:18px; left:300px; top: -70px;"  class = "adjust-line-height"> 
-                    <strong> "<?php echo $prod_description[$myvariable] ?>"</strong>
+                <p style = "color: #6A475A; position:relative; font-size:18px; left:450px; top: -70px;"  class = "adjust-line-height"> 
+                    <strong> "<?php echo $prod_artist[$myvariable] ?>"</strong>
                 </p>
                 <br> </br>
                 <br> </br>

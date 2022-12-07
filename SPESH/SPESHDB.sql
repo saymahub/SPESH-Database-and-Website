@@ -11,6 +11,12 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
 
+DROP DATABASE IF EXISTS SPESHDB;
+CREATE DATABASE SPESHDB; 
+USE SPESHDB;
+
+DROP TABLE IF EXISTS category;
+
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -43,7 +49,7 @@ INSERT INTO `category` (`id`, `name`) VALUES
 (4, 'Snacks');
 
 -- --------------------------------------------------------
-
+DROP TABLE IF EXISTS country;
 --
 -- Table structure for table `country`
 --
@@ -66,7 +72,7 @@ INSERT INTO `country` (`id`, `name`) VALUES
 (6, 'France');
 
 -- --------------------------------------------------------
-
+DROP TABLE IF EXISTS distributer;
 --
 -- Table structure for table `distributer`
 --
@@ -95,7 +101,7 @@ INSERT INTO `distributer` (`id`, `first name`, `last name`, `email`, `country`, 
 (8, 'Putin', 'Simpson', 'email', 'Japan', '4039882602');
 
 -- --------------------------------------------------------
-
+DROP TABLE IF EXISTS product;
 --
 -- Table structure for table `product`
 --
@@ -104,8 +110,8 @@ CREATE TABLE `product` (
   `id` int(10) NOT NULL,
   `country` varchar(200) NOT NULL,
   `bought` varchar(200) NOT NULL,
-  `category` varchar(200) NOT NULL,
-  `description` varchar(200) NOT NULL,
+  `era` varchar(200) NOT NULL,
+  `artist` varchar(200) NOT NULL,
   `prod name` varchar(200) NOT NULL,
   `price` varchar(200) NOT NULL,
   `image url` varbinary(200) NOT NULL
@@ -115,36 +121,36 @@ CREATE TABLE `product` (
 -- Dumping data for table `product`
 --
 
-INSERT INTO `product` (`id`, `country`, `bought`, `category`, `description`, `prod name`, `price`, `image url`) VALUES
-(0, 'United States', 'no', 'sweets', 'meat', 'Cotton Candy Oreo', '$10.00', 0x68747470733a2f2f70656f706c652e636f6d2f74686d622f394151526462525853557571486f4e527756586f6d657876315a733d2f3135303078302f66696c746572733a6e6f5f75707363616c6528293a6d61785f627974657328313530303030293a73747269705f69636328293a666f63616c2832393978303a3330317832292f6f72656f2d30312d363030783435302d63353736396530633237623434313538613736353363643266616332313339382e6a7067),
-(1, 'United States', 'no', 'sweets', 'A sweet treat for kids at festivals!', 'Cotton Candy Oreo', '$10.00', 0x68747470733a2f2f70656f706c652e636f6d2f74686d622f394151526462525853557571486f4e527756586f6d657876315a733d2f3135303078302f66696c746572733a6e6f5f75707363616c6528293a6d61785f627974657328313530303030293a73747269705f69636328293a666f63616c2832393978303a3330317832292f6f72656f2d30312d363030783435302d63353736396530633237623434313538613736353363643266616332313339382e6a7067),
-(2, 'Japan', 'no', 'sweets', 'Yuck? NO! Crunchy and delish.', 'Candied crabs', '$1.00', 0x68747470733a2f2f692e7974696d672e636f6d2f76692f78596e5f664e334f3972632f6d617872657364656661756c742e6a7067),
-(3, 'United Kingdom', 'no', 'chips', 'Not vegan friendly', 'Cajun Squirrel chips', '$3.00', 0x68747470733a2f2f63382e616c616d792e636f6d2f636f6d702f4243315830302f7061636b65742d6f662d77616c6b6572732d63616a756e2d737175697272656c2d666c61766f75722d6372697370732d4243315830302e6a7067),
-(4, 'Australia', 'no', 'chocolate', 'Nutritious and delicious ;). Austrailias favourite.', 'Vegemite Cadbury', '$15.00', 0x68747470733a2f2f732e79696d672e636f6d2f6e792f6170692f7265732f312e322f59596448416755694c345374475466366f744a6f4d512d2d2f595842776157513961476c6e61477868626d526c636a746f505459324e672d2d2f68747470733a2f2f732e79696d672e636f6d2f6f732f656e2d41552f686f6d6572756e2f79372e7961686f6f376c6966657374796c652f3866393566656465346133323261653262326335613665643265316636383663),
-(5, 'United States', 'no', 'msc', 'Can you handle the heat?', 'Hot Sauce Almonds', '$7.89', 0x68747470733a2f2f6d2e6d656469612d616d617a6f6e2e636f6d2f696d616765732f492f3631485a6d484d52696d4c2e5f41435f53583432355f2e6a7067),
-(6, 'Pakistan', 'no', 'msc', 'You\'ve never tasted this before', 'Lemon and Pepper tang', '$9.00', 0x68747470733a2f2f692e65626179696d672e636f6d2f696d616765732f672f77495541414f5377354d4667613052522f732d6c3530302e6a7067),
-(7, 'Bulgaria', 'no', 'chips', 'A gamers favourite snack.', 'Mountain Dew Cheetos', '$11.00', 0x68747470733a2f2f7777772e62616b657279616e64736e61636b732e636f6d2f7661722f7772626d5f67625f666f6f645f706861726d612f73746f726167652f696d616765732f332f302f372f392f313332393730332d312d656e672d47422f4d6f756e7461696e2d4465772d666c61766f7265642d43686565746f732d696e2d4a6170616e2e6a7067),
-(8, 'Britain', 'no', 'chocolate', 'Keeps the vampires away :P', 'Garlic Chocolate', '$32.00', 0x68747470733a2f2f656e637279707465642d74626e302e677374617469632e636f6d2f696d616765733f713d74626e3a414e6439476352785147376c53416852523756344b487a5f5758447279416d366f46337969716e5047706630465f436c444c776d3037366f3769314c336a692d4b7a3946647a5133546c3826757371703d434155),
-(9, 'Austrailia', 'no', 'msc', 'Warning: might melt before delivery.', 'Fish and Chips Gelato', '$2.99', 0x68747470733a2f2f6c6976652e737461746963666c69636b722e636f6d2f343039372f353434393731393636335f303964393734373665385f622e6a7067),
-(10, 'Russia', 'no', 'meat', 'Are you as dry as I am?', 'Dried Wild Fish', '$16.00', 0x68747470733a2f2f696d672e3231666f6f642e636f6d2f32303131303630392f70726f647563742f313330363931303734393634352e6a7067),
-(11, 'Mexico', 'no', 'msc', 'The best combination of Mexico and Italy', 'Salsagheti', '$1.50', 0x68747470733a2f2f63646e2e73686f706966792e636f6d2f732f66696c65732f312f303336322f303534322f383837322f70726f64756374732f38313430363662302d633863372d343261332d626539322d3033343565663334346438342d34336361386466656664343333326261336533633231376535373265326630642e6a70673f763d31363336363633343835),
-(12, 'Iceland', 'no', 'meat', 'At least it\'s fermented', 'Hákarl (Fermented Shark Meat)', '$10.00', 0x68747470733a2f2f696d616765732e6669727374776566656173742e636f6d2f636f6d706c65782f696d6167652f75706c6f61642f635f6c696d69742c665f6175746f2c666c5f6c6f7373792c715f6175746f2c775f313130302f646f62636e68667136773471767a617676316f662e6a7067),
-(13, 'Belgium', 'no', 'sweets', 'The French don\'t want them. ', 'Curry-Flavoured Macarons', '$10.00', 0x68747470733a2f2f656e637279707465642d74626e302e677374617469632e636f6d2f696d616765733f713d74626e3a414e6439476353396d5f624b416f67497a676a384177525271596d375150744b37394635314e54434e6c704e6777325a43512673),
-(14, 'Scotland', 'no', 'chips', 'It\'s not as bad as it sounds.', 'Haggis (Sheep Innards) and Black Pepper Chips', '$7.25', 0x68747470733a2f2f696d616765732e6669727374776566656173742e636f6d2f636f6d706c65782f696d6167652f75706c6f61642f635f66696c6c2c6470725f6175746f2c665f6175746f2c666c5f6c6f7373792c675f666163652c715f6175746f2c775f313238302f6e62766831706578746b7a663479776e747065692e6a7067),
-(15, 'Japan', 'no', 'msc', 'Italian children.', 'Spaghetti Flavoured Popsicles', '$66.66', 0x68747470733a2f2f63646e2e7472656e6468756e7465727374617469632e636f6d2f7068707468756d626e61696c732f3233352f3233353136362f3233353136365f325f3830302e6a7065673f6175746f3d77656270),
-(16, 'Bulgaria', 'no', 'msc', 'Oh yummy Samu\'s favourite.', 'instant noodles', '$0.50', 0x68747470733a2f2f63646e2e746865776972656375747465722e636f6d2f77702d636f6e74656e742f75706c6f6164732f323032302f30362f6e6f6f646c65732d6c6f777265732d383630372e6a7067),
-(17, 'Thailand', 'no', 'meat', 'These tiny critters are delicious.', 'Jing Leed (Grasshoppers)', '$10.01', 0x68747470733a2f2f7777772e7368757474657273746f636b2e636f6d2f696d6167652d70686f746f2f73636f7270696f6e2d646565702d66726965642d696e73656374732d62616e676b6f6b2d3236306e772d313032363537373631352e6a7067),
-(18, 'New Zealand', 'no', 'chips', 'Not a baaa baaaaa d idea', 'Lamb And Mint Chips', '$4.50', 0x68747470733a2f2f7777772e7461717569746f732e6e65742f696d2f736e2f57616c6b6572732d4c616d624d696e742e6a7067),
-(19, 'Japan', 'no', 'chocolate', 'It\'s corn1 A big lumb of knobs!', 'Grilled Corn KitKat', '$8.00', 0x68747470733a2f2f6c6976652e737461746963666c69636b722e636f6d2f323735372f343136333330373032375f653032386535376434375f622e6a7067),
-(20, 'United States', 'no', 'msc', 'Dippin into chocolate', 'Brownie Flavour Hummus Dip', '$3.99', 0x68747470733a2f2f656e637279707465642d74626e302e677374617469632e636f6d2f696d616765733f713d74626e3a414e6439476353545075547a617979385a4b48644239396d6967456f4850366e5758664c3653596f4a5126757371703d434155);
+INSERT INTO `product` (`id`, `country`, `bought`, `era`, `artist`, `prod name`, `price`, `image url`) VALUES
+(0, 'United States', 'no', 'sweets', 'Ivan Aivazovsky', 'The Ninth Wave', '$10.00', "https://imgix.ranker.com/user_node_img/2231/44616753/original/the-ninth-wave-photo-u1?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=200"),
+(1, 'United States', 'no', 'sweets', 'Ivan Aivazovsky', 'The Ninth Wave', '$10.00', "https://imgix.ranker.com/user_node_img/2231/44616753/original/the-ninth-wave-photo-u1?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=375"),
+(2, 'Japan', 'no', 'sweets', 'John William Waterhouse', 'The Lady of Shalott', '$1.00', "https://imgix.ranker.com/user_node_img/475/9494074/original/the-lady-of-shalott-photo-u3?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=375"),
+(3, 'United Kingdom', 'no', 'chips', 'Pierre-Auguste Renoir', 'Dance at Le Moulin de la Galette', '$3.00', "https://imgix.ranker.com/user_node_img/27/536908/original/bal-au-moulin-de-la-galette-montmartre-photo-u2?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=375"),
+(4, 'Australia', 'no', 'chocolate', 'Hokusai', 'The Great Wave off Kanagawa', '$15.00', "https://imgix.ranker.com/user_node_img/1698/33952630/original/the-great-wave-off-kanagawa-photo-u2?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=375"),
+(5, 'United States', 'no', 'msc', 'Hieronymus Bosch', 'The Garden of Earthly Delights', '$7.89', "https://imgix.ranker.com/user_node_img/110/2194180/original/the-garden-of-earthly-delights-photo-u5?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=375"),
+(6, 'Pakistan', 'no', 'msc', 'Jean-François Millet', 'The Gleaners', '$9.00', "https://imgix.ranker.com/user_node_img/597/11936379/original/the-gleaners-photo-u1?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=375"),
+(7, 'Bulgaria', 'no', 'chips', 'Pierre-Auguste Renoir', 'Luncheon of the Boating Party', '$11.00', "https://imgix.ranker.com/user_node_img/75/1487553/original/luncheon-of-the-boating-party-photo-u1?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=375"),
+(8, 'Britain', 'no', 'chocolate', 'Georges-Pierre Seurat', 'Sunday Afternoon on the Island of La Grande Jatte', '$32.00', "https://imgix.ranker.com/user_node_img/107/2121412/original/sunday-afternoon-on-the-island-of-la-grande-jatte-photo-u3?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=375"),
+(9, 'Austrailia', 'no', 'msc', 'Gustave Caillebotte', 'Paris Street; Rainy Day', '$2.99', "https://imgix.ranker.com/user_node_img/88/1756510/original/paris-street_-rainy-day-photo-u2?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=375"),
+(10, 'Russia', 'no', 'meat', 'Édouard Manet', 'A Bar at the Folies-Bergère', '$16.00', "https://imgix.ranker.com/user_node_img/27/521266/original/a-bar-at-the-folies-berg_re-photo-u1?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=375"),
+(11, 'Mexico', 'no', 'msc', 'Théodore Géricault', 'The Raft of the Medusa', '$1.50', "https://imgix.ranker.com/user_node_img/94/1865958/original/the-raft-of-the-medusa-photo-u1?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=375"),
+(12, 'Iceland', 'no', 'meat', 'Carl Bloch', 'In a Roman Osteria', '$10.00', "https://imgix.ranker.com/user_node_img/50090/1001781107/original/in-a-roman-osteria-photo-u2?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=375"),
+(13, 'Belgium', 'no', 'sweets', 'Caspar David Friedrich', 'Moonrise Over the Sea', '$10.00', "https://imgix.ranker.com/user_node_img/567/11334768/original/moonrise-over-the-sea-photo-u1?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=375"),
+(14, 'Scotland', 'no', 'chips', 'Rembrandt', 'The Anatomy Lesson of Dr. Nicolaes Tulp', '$7.25', "https://imgix.ranker.com/user_node_img/23/455180/original/anatomy-lesson-of-dr-nicolaes-tulp-photo-u1?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=375"),
+(15, 'Japan', 'no', 'msc', 'J. M. W. Turner', 'The Fighting Temeraire', '$66.66', "https://imgix.ranker.com/user_node_img/110/2192029/original/the-fighting-temeraire-photo-u1?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=375"),
+(16, 'Bulgaria', 'no', 'msc', 'Emanuel Leutze', 'Washington Crossing the Delaware', '$0.50', "https://imgix.ranker.com/user_node_img/119/2362286/original/washington-crossing-the-delaware-photo-u2?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=375"),
+(17, 'Thailand', 'no', 'meat', 'Francisco Goya', 'The Third of May 1808', '$10.01', "https://imgix.ranker.com/user_node_img/112/2225478/original/the-third-of-may-1808-photo-u1?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=375"),
+(18, 'New Zealand', 'no', 'chips', 'Vincent van Gogh', 'The Night Café', '$4.50', "https://imgix.ranker.com/user_node_img/111/2210420/original/the-night-caf_-photo-u1?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=375"),
+(19, 'Japan', 'no', 'chocolate', 'Winslow Homer', 'Breezing Up', '$8.00', "https://imgix.ranker.com/user_node_img/1114/22279193/original/breezing-up-photo-u2?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=375"),
+(20, 'United States', 'no', 'msc', 'J. M. W. Turner', 'The Slave Ship', '$3.99', "https://imgix.ranker.com/user_node_img/112/2221416/original/the-slave-ship-photo-u1?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=375");
 
 -- --------------------------------------------------------
-
+DROP TABLE IF EXISTS shipping_deets;
 --
 -- Table structure for table `shipping deets`
 --
 
-CREATE TABLE `shipping deets` (
+CREATE TABLE `shipping_deets` (
   `id` int(10) NOT NULL,
   `trackingnum` varchar(200) NOT NULL,
   `ETA` varchar(200) DEFAULT NULL
@@ -154,7 +160,7 @@ CREATE TABLE `shipping deets` (
 -- Dumping data for table `shipping deets`
 --
 
-INSERT INTO `shipping deets` (`id`, `trackingnum`, `ETA`) VALUES
+INSERT INTO `shipping_deets` (`id`, `trackingnum`, `ETA`) VALUES
 (1, '3200066534', 'Decemeber 5th, 2022'),
 (2, '3264366534', 'Decemeber 5th, 2022'),
 (3, '3200364534', 'Decemeber 5th, 2022'),
@@ -165,7 +171,7 @@ INSERT INTO `shipping deets` (`id`, `trackingnum`, `ETA`) VALUES
 (8, '3200066534', 'Decemeber 5th, 2022');
 
 -- --------------------------------------------------------
-
+DROP TABLE IF EXISTS users;
 --
 -- Table structure for table `users`
 --
@@ -226,7 +232,7 @@ ALTER TABLE `product`
 --
 -- Indexes for table `shipping deets`
 --
-ALTER TABLE `shipping deets`
+ALTER TABLE `shipping_deets`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -267,7 +273,7 @@ ALTER TABLE `product`
 --
 -- AUTO_INCREMENT for table `shipping deets`
 --
-ALTER TABLE `shipping deets`
+ALTER TABLE `shipping_deets`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
