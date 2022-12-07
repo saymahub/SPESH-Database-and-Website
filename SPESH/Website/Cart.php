@@ -190,7 +190,6 @@ hr{
 		$selection1 = $_POST["selection1"];
 		$selection2 = $_POST["selection2"];
 		$selection3 = $_POST["selection3"];
-
 		// Username is root
 		$user = 'root';
 		$password = '';
@@ -233,6 +232,8 @@ hr{
 			</div>
 	<?php
 		if ($selection1 >= 1){
+			$sql = " UPDATE product SET bought ='yes' WHERE id=$selection1";
+			$query = mysqli_query($mysqli, $sql);
 	    	$counter = $counter + 1;
 			$price = $prod_price[$selection1];
 			$price = ltrim($price, '$');
@@ -257,6 +258,8 @@ hr{
 
    <?php
 		if ($selection2 >= 1){
+			$sql = " UPDATE product SET bought ='yes' WHERE id=$selection2";
+			$query = mysqli_query($mysqli, $sql);
 			$counter = $counter + 1;
 			$price = $prod_price[$selection2];
 			$price = ltrim($price, '$');
@@ -281,6 +284,8 @@ hr{
 	  
 	<?php
 		if ($selection3 >= 1){
+			$sql = " UPDATE product SET bought ='yes' WHERE id=$selection3";
+			$query = mysqli_query($mysqli, $sql);
 			$counter = $counter + 1;
 			$price = $prod_price[$selection3];
 			$price = ltrim($price, '$');
@@ -301,8 +306,6 @@ hr{
 			<?php
 		}
 	?>
-
-    
    	 <hr> 
    	 <div class="checkout">
    	 <div class="total">

@@ -91,14 +91,14 @@ CREATE TABLE `distributer` (
 --
 
 INSERT INTO `distributer` (`id`, `first name`, `last name`, `email`, `country`, `phone`) VALUES
-(1, 'Phil', 'Simpson', 'email', 'Japan', '4039882602'),
-(2, 'Jasmeender', 'Simpson', 'email', 'Japan', '4039882602'),
-(3, 'Siwon', 'Choi', 'email', 'Japan', '4039882602'),
-(4, 'George', 'Simpson', 'email', 'Japan', '4039882602'),
-(5, 'Daniel', 'Simpson', 'email', 'Japan', '4039882602'),
-(6, 'Sangeet', 'Paramjeet', 'email', 'Japan', '4039882602'),
-(7, 'Barthalomew', 'Simpson', 'email', 'Japan', '4039882602'),
-(8, 'Putin', 'Simpson', 'email', 'Japan', '4039882602');
+(1, 'Phil', 'Simpson', 'phil@distrib.ca', 'Japan', '184 758 3920'),
+(2, 'Jasmeender', 'Simpson', 'Jasmeender@distrib.ca', 'Japan', '264 901 7284'),
+(3, 'Siwon', 'Choi', 'Siwon@distrib.ca', 'Japan', '740 154 9174'),
+(4, 'George', 'Simpson', 'george@distrib.ca', 'Japan', '910 274 8394'),
+(5, 'Daniel', 'Simpson', 'daniel@distrib.ca', 'Japan', '672 839 0940'),
+(6, 'Sangeet', 'Paramjeet', 'sangeet@distrib.ca', 'Japan', '567 890 2345'),
+(7, 'Barthalomew', 'Simpson', 'Barthalomew@distrib.ca', 'Japan', '876 498 3900'),
+(8, 'Putin', 'Simpson', 'putin@distrib.ca', 'Japan', '536 738 3988');
 
 -- --------------------------------------------------------
 DROP TABLE IF EXISTS product;
@@ -177,7 +177,7 @@ DROP TABLE IF EXISTS users;
 --
 
 CREATE TABLE `users` (
-  `id` int(10) NOT NULL,
+  `id` int(10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
   `username` varchar(200) NOT NULL,
   `email` varchar(200) NOT NULL,
   `card` varchar(200) DEFAULT NULL,
@@ -238,9 +238,9 @@ ALTER TABLE `shipping_deets`
 --
 -- Indexes for table `users`
 --
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `email` (`email`);
+-- ALTER TABLE `users`
+--   ADD PRIMARY KEY (`id`),
+--   ADD UNIQUE KEY `email` (`email`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -260,7 +260,7 @@ ALTER TABLE `country`
 
 --
 -- AUTO_INCREMENT for table `distributer`
---
+
 ALTER TABLE `distributer`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
@@ -276,12 +276,12 @@ ALTER TABLE `product`
 ALTER TABLE `shipping_deets`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
---
--- AUTO_INCREMENT for table `users`
---
-ALTER TABLE `users`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
-COMMIT;
+-- --
+-- -- AUTO_INCREMENT for table `users`
+-- --
+-- ALTER TABLE `users`
+--   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
+-- COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

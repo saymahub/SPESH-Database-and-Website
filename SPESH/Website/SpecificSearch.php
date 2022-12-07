@@ -51,6 +51,20 @@
 	<body>
 
 		<h1 style="color: #451C29; font-size:60px; text-align:center;">SPESH Market! </h1>
+        <form action="Cart.php" method="post">
+                    <div>
+                        <br></br>
+                        <label>OR</label>
+                        <br></br>
+                        <label>Selection 1:</label>
+                        <input type="text" name="selection1"/>
+                        <label>Selection 2:</label>
+                        <input type="text" name="selection2"/>
+                        <label>Selection 3:</label>
+                        <input type="text" name="selection3"/>
+                        <input type="submit" value="Confirm Selection" />
+                    </div>
+                </form>
         <?php
 			$countryFlag = 0;
 			$categoryFlag = 0;
@@ -109,6 +123,7 @@
                 //echo $precio_digital;
                 ?>
                 <!-- <img src= "<?php echo $prod_img[$myvariable] ?>" alt="test" height=200/> -->
+                
                 <?php
 				if($countryFlag == 1){
 					if($prod_country[$myvariable] == $country && $_POST["country"] != null){
