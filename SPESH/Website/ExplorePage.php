@@ -2,7 +2,6 @@
 <!-- <?php
     // session_start();
     // echo $_SESSION['test'];
-
 ?> -->
 <html lang="en">
 <head>
@@ -53,7 +52,7 @@
 		<p style = "text-align:center; font-size:20px;"> Explore the various paintings SPESH has to offer!</p>
         <p style = "text-align:center; font-size:15px;"> Customers can only purchase a maximum of 3 paintings per transaction!</p>
 		<a href="Login.php"><input type="button" value="Back" style="position:relative; font-size:12px; left: 20px; top: -170px;"></a>
-        <form action="SpecificSearch.php" method="post">
+        
 		<div>
         <?php
                   // Username is root
@@ -169,6 +168,7 @@
         <br></br>
         <br></br>
         <br></br>
+        <form action="SpecificSearch.php" method="post">
 			<label>Search By Artist:</label>
 			<input type="text" name="artist"/>           
             <label>OR</label>
@@ -179,7 +179,7 @@
 			<input type="text" name="era"/>
             <br></br>
             <input type="submit" value="Confirm Search" />
-	
+        </form>
         <form action="Cart.php" method="post">
 		<div>
         <br></br>
@@ -193,7 +193,7 @@
 			<input type="text" name="selection3"/>
             <input type="submit" value="Confirm Selection" />
 		</div>
-        </form>
+        
         <?php
             // Username is root
             $user = 'root';
@@ -240,7 +240,7 @@
                 <!-- <img src= "<?php echo $prod_img[$myvariable] ?>" alt="test" height=200/> -->
                 
                 <p style = "color: #6A475A;position:relative; font-size:30px; left: 450px; top: 90px;" class = "adjust-line-height"> 
-                    <strong> <?php echo $counter ?></strong><strong> <?php echo $prod_name[$myvariable] ?></strong>
+                    <strong> <?php echo $prod_id ?></strong><strong> <?php echo $prod_name[$myvariable] ?></strong>
                 </p>
                 <img src= "<?php echo $prod_img[$myvariable] ?>" alt="test"
                     style = "width:300px; position:relative; left:60px; top: 30px;">

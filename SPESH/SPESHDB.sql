@@ -11,12 +11,6 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
 
-DROP DATABASE IF EXISTS SPESHDB;
-CREATE DATABASE SPESHDB; 
-USE SPESHDB;
-
-DROP TABLE IF EXISTS category;
-
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -49,7 +43,7 @@ INSERT INTO `category` (`id`, `name`) VALUES
 (4, 'Snacks');
 
 -- --------------------------------------------------------
-DROP TABLE IF EXISTS country;
+
 --
 -- Table structure for table `country`
 --
@@ -72,7 +66,7 @@ INSERT INTO `country` (`id`, `name`) VALUES
 (6, 'France');
 
 -- --------------------------------------------------------
-DROP TABLE IF EXISTS distributer;
+
 --
 -- Table structure for table `distributer`
 --
@@ -101,7 +95,7 @@ INSERT INTO `distributer` (`id`, `first name`, `last name`, `email`, `country`, 
 (8, 'Putin', 'Simpson', 'putin@distrib.ca', 'Japan', '536 738 3988');
 
 -- --------------------------------------------------------
-DROP TABLE IF EXISTS product;
+
 --
 -- Table structure for table `product`
 --
@@ -145,12 +139,12 @@ INSERT INTO `product` (`id`, `country`, `bought`, `era`, `artist`, `prod name`, 
 (20, 'United States', 'no', 'msc', 'J. M. W. Turner', 'The Slave Ship', '$399.99', "https://imgix.ranker.com/user_node_img/112/2221416/original/the-slave-ship-photo-u1?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=375");
 
 -- --------------------------------------------------------
-DROP TABLE IF EXISTS shipping_deets;
+
 --
 -- Table structure for table `shipping deets`
 --
 
-CREATE TABLE `shipping_deets` (
+CREATE TABLE `shipping deets` (
   `id` int(10) NOT NULL,
   `trackingnum` varchar(200) NOT NULL,
   `ETA` varchar(200) DEFAULT NULL
@@ -160,7 +154,7 @@ CREATE TABLE `shipping_deets` (
 -- Dumping data for table `shipping deets`
 --
 
-INSERT INTO `shipping_deets` (`id`, `trackingnum`, `ETA`) VALUES
+INSERT INTO `shipping deets` (`id`, `trackingnum`, `ETA`) VALUES
 (1, '3200066534', 'Decemeber 5th, 2022'),
 (2, '3264366534', 'Decemeber 5th, 2022'),
 (3, '3200364534', 'Decemeber 5th, 2022'),
@@ -171,7 +165,7 @@ INSERT INTO `shipping_deets` (`id`, `trackingnum`, `ETA`) VALUES
 (8, '3200066534', 'Decemeber 5th, 2022');
 
 -- --------------------------------------------------------
-DROP TABLE IF EXISTS users;
+
 --
 -- Table structure for table `users`
 --
@@ -232,7 +226,7 @@ ALTER TABLE `product`
 --
 -- Indexes for table `shipping deets`
 --
-ALTER TABLE `shipping_deets`
+ALTER TABLE `shipping deets`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -273,7 +267,7 @@ ALTER TABLE `product`
 --
 -- AUTO_INCREMENT for table `shipping deets`
 --
-ALTER TABLE `shipping_deets`
+ALTER TABLE `shipping deets`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 -- --
