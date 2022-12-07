@@ -50,7 +50,8 @@
 	<body>
 
 		<h1 style="color: #451C29; font-size:60px; text-align:center;">SPESH Market! </h1>
-		<p style = "text-align:center; font-size:20px;"> Explore the multitude of products SPESH has to offer!</p>
+		<p style = "text-align:center; font-size:20px;"> Explore the various paintings SPESH has to offer!</p>
+        <p style = "text-align:center; font-size:15px;"> Customers can only purchase a maximum of 3 paintings per transaction!</p>
 		<a href="Login.php"><input type="button" value="Back" style="position:relative; font-size:12px; left: 20px; top: -170px;"></a>
         <form action="SpecificSearch.php" method="post">
 		<div>
