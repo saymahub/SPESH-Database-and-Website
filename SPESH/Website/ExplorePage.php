@@ -209,7 +209,7 @@
                 $mysqli->connect_error);
             }
             
-            $sql = " SELECT * FROM product";
+            $sql = " SELECT * FROM product WHERE bought = 'no'";
             $query = mysqli_query($mysqli, $sql);
                         $prod = mysqli_fetch_array($query);
             

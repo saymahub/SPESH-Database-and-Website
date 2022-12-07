@@ -101,6 +101,21 @@
 	</div>
 	</div>
 
+	<div class="row">
+	<div class="column">
+    <h2 style = "color: #4F2E38">New Here? Sign Up Now!</h2>
+		<form action="SignUp.php" method="post">
+		<div>
+			<input type="submit" value="Let's Go" />
+		</div>
+        </form>
+		</div>
+		
+	</div>
+	</div>
+
+
+
 	
 	
 	
