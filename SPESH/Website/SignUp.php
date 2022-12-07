@@ -87,7 +87,7 @@
                     </div>
                         
                 </form>
-                    <a href="LoginPage.php"><input type="button" value="Back" style="float: left;"></a>
+                    <a href="Login.php"><input type="button" value="Back" style="float: left;"></a>
                 
             </div>
         </div>
