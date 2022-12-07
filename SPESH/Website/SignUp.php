@@ -20,13 +20,13 @@ $expiry = str_pad($e, strlen($e) +2, "'", STR_PAD_BOTH);
 $addy = str_pad($f, strlen($f) +2, "'", STR_PAD_BOTH);
 $pass = str_pad($g, strlen($g) +2, "'", STR_PAD_BOTH);
 
-echo $username;
-echo $email;
-echo $cardnum;
-echo $cvv;
-echo $expiry;
-echo $addy;
-echo $pass;
+// echo $username;
+// echo $email;
+// echo $cardnum;
+// echo $cvv;
+// echo $expiry;
+// echo $addy;
+// echo $pass;
 
 $user = 'root';
 $password = '';

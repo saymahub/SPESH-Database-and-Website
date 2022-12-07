@@ -41,7 +41,7 @@
 		
 		<!--  6D4F60-->
 
-		<p style = "text-align:center; font-size:20px;"> Shop online at SPESH wherever, whenever to explore our diverse selection of international snacks. It's never been easier to have the taste of home right at your finger tips!</p>
+		<p style = "text-align:center; font-size:20px;"> Shop online at SPESH wherever, whenever to explore our diverse selection of stolen paintings. It's never been easier to commit crimes in the comfort of your home!</p>
 		
 		
 		<p style = "color: #451C29;text-align:center; font-size:30px;"> <strong> Sign in to continue! </strong></p>
