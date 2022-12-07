@@ -233,13 +233,8 @@
                 ?>
                 <!-- <img src= "<?php echo $prod_img[$myvariable] ?>" alt="test" height=200/> -->
                 
-<<<<<<< HEAD
                 <p style = "color: #6A475A;position:relative; font-size:30px; left: 450px; top: 90px;" class = "adjust-line-height"> 
                     <strong> <?php echo $counter ?></strong><strong> <?php echo $prod_name[$myvariable] ?></strong>
-=======
-                <p style = "color: #6A475A;position:relative; font-size:30px; left: 300px; top: 90px;" class = "adjust-line-height"> 
-                    <strong> <?php echo $prod_id ?></strong><strong> <?php echo $prod_name[$myvariable] ?></strong>
->>>>>>> 5688f3dd40e14eea1400b55c09581ddd771c81eb
                 </p>
                 <img src= "<?php echo $prod_img[$myvariable] ?>" alt="test"
                     style = "width:300px; position:relative; left:60px; top: 30px;">
