@@ -92,10 +92,10 @@
                 $prod_id = $prod_row['id'];
                 $prod_name[$myvariable] = $prod_row['prod name'];
                 $prod_country[$myvariable] = $prod_row['country'];
-                $prod_category[$myvariable] = $prod_row['era'];
+                $prod_era[$myvariable] = $prod_row['era'];
                 $prod_price[$myvariable] = $prod_row['price'];
                 $prod_img[$myvariable] = $prod_row['image url'];
-                $prod_description[$myvariable] = $prod_row['artist'];
+                $prod_artist[$myvariable] = $prod_row['artist'];
 
                 //echo $prod_country[$myvariable];
                 $myvariable = $myvariable + 1;
@@ -109,9 +109,9 @@
             //     $iter++;
             // }
 
-            $uniqCountries = array_unique($prod_country);
+            $uniqArtist = array_unique($prod_artist);
           
-            $uniqCategories = array_unique($prod_category);
+            $uniqEra = array_unique($prod_era);
             
             
            
@@ -119,15 +119,15 @@
 
         <div class="row">
         <div class="column">
-            <h2>Countries:</h2>
+            <h2>Artists:</h2>
             <?php
             $iter = 0;
-            while($iter < sizeof($uniqCountries)){
-            echo $uniqCountries[$iter];
+            while($iter < sizeof($uniqArtist)){
+            echo $uniqArtist[$iter];
             ?>
             <br></br>
             <?php
-            if($iter == 3 || $iter == 13){
+            if($iter == 5){
                 $iter = $iter + 2;
             }
             
@@ -137,11 +137,11 @@
     
         </div>
         <div class="column">
-        <h2>Categories:</h2>
+        <h2>Era:</h2>
         <?php
             $iter = 0;
-            while($iter < sizeof($uniqCategories)){
-            echo $uniqCategories[$iter];
+            while($iter < sizeof($uniqEra)){
+            echo $uniqEra[$iter];
             ?>
             <br></br>
             <?php
@@ -157,6 +157,11 @@
         ?>
         </div>
         </div>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
         <br></br>
         <br></br>
         <br></br>
