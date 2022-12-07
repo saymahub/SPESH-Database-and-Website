@@ -74,7 +74,7 @@
 			}
 			
 			else if ($_POST["era"] != null){
-				$eraFlag = $_POST["era"];
+				$era = $_POST["era"];
 				$eraFlag = 1;
 			}
 			
