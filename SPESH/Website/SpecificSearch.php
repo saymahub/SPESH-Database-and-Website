@@ -63,6 +63,8 @@
                         <label>Selection 3:</label>
                         <input type="text" name="selection3"/>
                         <input type="submit" value="Confirm Selection" />
+                        <br></br>
+                        <p> Please enter painting ID into selection </p>
                     </div>
                 </form>
         <?php
