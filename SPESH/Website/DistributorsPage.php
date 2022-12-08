@@ -122,98 +122,10 @@
             </div>
 
             <?php
-            
+            $counter = $counter + 1;
         }
-        ?>
-    <!-- <div class="column" style="background-color:#aaa;">
-        <h2>Column 1</h2>
-        <p>Some text..</p>
-    </div>
-    <div class="column" style="background-color:#bbb;">
-        <h2>Column 2</h2>
-        <p>Some text..</p>
-    </div>
-    <div class="column" style="background-color:#ccc;">
-        <h2>Column 3</h2>
-        <p>Some text..</p>
-    </div>
-    <div class="column" style="background-color:#ddd;">
-        <h2>Column 4</h2>
-        <p>Some text..</p>
-    </div> -->
-    </div>
-   <!-- <?php
-            // Username is root
-            $user = 'root';
-            $password = '';
-            
-            $database = 'speshdb';
-            
-            // Server is localhost with
-            // port number 3306
-            $servername='localhost:3306';
-            $mysqli = new mysqli($servername, $user,
-                            $password, $database);
-            
-            // Checking for connections
-            if ($mysqli->connect_error) {
-                die('Connect Error (' .
-                $mysqli->connect_errno . ') '.
-                $mysqli->connect_error);
-            }
-            
-            $sql = " SELECT * FROM distributer";
-            $query = mysqli_query($mysqli, $sql);
-                        $prod = mysqli_fetch_array($query);
-            
-                        
-            $myvariable = 0;
-            $prod_id = 0;
-            $first_name = [];
-            $last_name = [];
-            $email = [];
-            $country = [];
-            $phone = [];
-            $image = [];
-            $counter = 1;
-            ?>
-                <div class="row">
-            <?php
-            $space = 1;
-            while($prod_row = mysqli_fetch_array($query)){
-                $prod_id = $prod_row['id'];
-                $first_name[$myvariable] = $prod_row['first name'];
-                $last_name[$myvariable] = $prod_row['last name'];
-                $email[$myvariable] = $prod_row['email'];
-                $phone[$myvariable] = $prod_row['phone'];
-                $image[$myvariable] = $prod_row['image'];
-
-                //echo $precio_digital;
-                ?>
-
-                <div class="column">
-                    <h2 style="color: #4F2E38;"><?php echo $first_name[$myvariable] ?> <?php echo " " ?> <?php echo $last_name[$myvariable] ?></h2>
-                    <p><?php echo $email[$myvariable] ?></p>
-                    <p><?php echo $phone[$myvariable] ?></p>
-                    <img src="<?php echo $image[$myvariable] ?>" height="200" class="center"{margin-right: 30%}>
-                    <br></br>
-                    <a href="ContactDistributor.php"><input type="button" value="Contact" style="float: left;"></a>
-                </div>
-
-                <br> </br>
-                <br> </br>
-                <?php
-                            $counter = $counter + 1;
-            }
-            
-            ?>
-                </div>
-            <?php
-            
-
-            
         $mysqli->close();
-        ?>  -->
+        ?>
         
 </body>
 </html>
