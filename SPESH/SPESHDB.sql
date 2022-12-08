@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 06, 2022 at 10:28 PM
+-- Generation Time: Dec 08, 2022 at 05:27 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -20,50 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `speshdb`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `category`
---
-
-CREATE TABLE `category` (
-  `id` int(10) NOT NULL,
-  `name` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `category`
---
-
-INSERT INTO `category` (`id`, `name`) VALUES
-(1, 'Produce'),
-(2, 'Drinks'),
-(3, 'Spices'),
-(4, 'Snacks');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `country`
---
-
-CREATE TABLE `country` (
-  `id` int(10) NOT NULL,
-  `name` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `country`
---
-
-INSERT INTO `country` (`id`, `name`) VALUES
-(1, 'Afghanistan'),
-(2, 'Bulgaria'),
-(3, 'China'),
-(4, 'Dominican Republic'),
-(5, 'England'),
-(6, 'France');
 
 -- --------------------------------------------------------
 
@@ -85,7 +41,7 @@ CREATE TABLE `distributer` (
 -- Dumping data for table `distributer`
 --
 
-INSERT INTO `distributer` (`id`, `first name`, `last name`, `email`, `country`, `phone`,`image`) VALUES
+INSERT INTO `distributer` (`id`, `first name`, `last name`, `email`, `country`, `phone`, `image`) VALUES
 (1, 'Phil', 'Simpson', 'phil@distrib.ca', 'Japan', '184 758 3920', 'https://upload.wikimedia.org/wikipedia/en/d/da/Matt_LeBlanc_as_Joey_Tribbiani.jpg'),
 (2, 'Jasmeender', 'Simpson', 'Jasmeender@distrib.ca', 'Japan', '264 901 7284', 'https://upload.wikimedia.org/wikipedia/en/d/da/Matt_LeBlanc_as_Joey_Tribbiani.jpg'),
 (3, 'Siwon', 'Choi', 'Siwon@distrib.ca', 'Japan', '740 154 9174', 'https://upload.wikimedia.org/wikipedia/en/d/da/Matt_LeBlanc_as_Joey_Tribbiani.jpg'),
@@ -104,7 +60,7 @@ INSERT INTO `distributer` (`id`, `first name`, `last name`, `email`, `country`, 
 CREATE TABLE `product` (
   `id` int(10) NOT NULL,
   `bought` varchar(200) NOT NULL,
-  `era` varchar(200) NOT NULL,
+  `style` varchar(200) NOT NULL,
   `artist` varchar(200) NOT NULL,
   `prod name` varchar(200) NOT NULL,
   `price` varchar(200) NOT NULL,
@@ -115,28 +71,28 @@ CREATE TABLE `product` (
 -- Dumping data for table `product`
 --
 
-INSERT INTO `product` (`id`, `bought`, `era`, `artist`, `prod name`, `price`, `image url`) VALUES
-(0, 'no', 'sweets', 'Ivan Aivazovsky', 'The Ninth Wave', '$101.00', "https://imgix.ranker.com/user_node_img/2231/44616753/original/the-ninth-wave-photo-u1?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=200"),
-(1, 'no', 'sweets', 'Ivan Aivazovsky', 'The Ninth Wave', '$101.00', "https://imgix.ranker.com/user_node_img/2231/44616753/original/the-ninth-wave-photo-u1?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=375"),
-(2, 'no', 'sweets', 'John William Waterhouse', 'The Lady of Shalott', '$129.00', "https://imgix.ranker.com/user_node_img/475/9494074/original/the-lady-of-shalott-photo-u3?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=375"),
-(3, 'no', 'chips', 'Pierre-Auguste Renoir', 'Dance at Le Moulin de la Galette', '$376.99', "https://imgix.ranker.com/user_node_img/27/536908/original/bal-au-moulin-de-la-galette-montmartre-photo-u2?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=375"),
-(4, 'no', 'chocolate', 'Hokusai', 'The Great Wave off Kanagawa', '$152.89', "https://imgix.ranker.com/user_node_img/1698/33952630/original/the-great-wave-off-kanagawa-photo-u2?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=375"),
-(5, 'no', 'msc', 'Hieronymus Bosch', 'The Garden of Earthly Delights', '$738.89', "https://imgix.ranker.com/user_node_img/110/2194180/original/the-garden-of-earthly-delights-photo-u5?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=375"),
-(6, 'no', 'msc', 'Jean-François Millet', 'The Gleaners', '$927.99', "https://imgix.ranker.com/user_node_img/597/11936379/original/the-gleaners-photo-u1?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=375"),
-(7, 'no', 'chips', 'Pierre-Auguste Renoir', 'Luncheon of the Boating Party', '$111.11', "https://imgix.ranker.com/user_node_img/75/1487553/original/luncheon-of-the-boating-party-photo-u1?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=375"),
-(8, 'no', 'chocolate', 'Georges-Pierre Seurat', 'Sunday Afternoon on the Island of La Grande Jatte', '$321.00', "https://imgix.ranker.com/user_node_img/107/2121412/original/sunday-afternoon-on-the-island-of-la-grande-jatte-photo-u3?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=375"),
-(9, 'no', 'msc', 'Gustave Caillebotte', 'Paris Street; Rainy Day', '$224.99', "https://imgix.ranker.com/user_node_img/88/1756510/original/paris-street_-rainy-day-photo-u2?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=375"),
-(10, 'no', 'meat', 'Édouard Manet', 'A Bar at the Folies-Bergère', '$161.00', "https://imgix.ranker.com/user_node_img/27/521266/original/a-bar-at-the-folies-berg_re-photo-u1?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=375"),
-(11, 'no', 'msc', 'Théodore Géricault', 'The Raft of the Medusa', '$189.50', "https://imgix.ranker.com/user_node_img/94/1865958/original/the-raft-of-the-medusa-photo-u1?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=375"),
-(12, 'no', 'meat', 'Carl Bloch', 'In a Roman Osteria', '$210.00', "https://imgix.ranker.com/user_node_img/50090/1001781107/original/in-a-roman-osteria-photo-u2?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=375"),
-(13, 'no', 'sweets', 'Caspar David Friedrich', 'Moonrise Over the Sea', '$843.99', "https://imgix.ranker.com/user_node_img/567/11334768/original/moonrise-over-the-sea-photo-u1?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=375"),
-(14, 'no', 'chips', 'Rembrandt', 'The Anatomy Lesson of Dr. Nicolaes Tulp', '$721.25', "https://imgix.ranker.com/user_node_img/23/455180/original/anatomy-lesson-of-dr-nicolaes-tulp-photo-u1?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=375"),
-(15, 'no', 'msc', 'J. M. W. Turner', 'The Fighting Temeraire', '$666.66', "https://imgix.ranker.com/user_node_img/110/2192029/original/the-fighting-temeraire-photo-u1?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=375"),
-(16, 'no', 'msc', 'Emanuel Leutze', 'Washington Crossing the Delaware', '$102.50', "https://imgix.ranker.com/user_node_img/119/2362286/original/washington-crossing-the-delaware-photo-u2?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=375"),
-(17, 'no', 'meat', 'Francisco Goya', 'The Third of May 1808', '$510.01', "https://imgix.ranker.com/user_node_img/112/2225478/original/the-third-of-may-1808-photo-u1?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=375"),
-(18, 'no', 'chips', 'Vincent van Gogh', 'The Night Café', '$402.50', "https://imgix.ranker.com/user_node_img/111/2210420/original/the-night-caf_-photo-u1?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=375"),
-(19, 'no', 'chocolate', 'Winslow Homer', 'Breezing Up', '$891.00', "https://imgix.ranker.com/user_node_img/1114/22279193/original/breezing-up-photo-u2?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=375"),
-(20, 'no', 'msc', 'J. M. W. Turner', 'The Slave Ship', '$399.99', "https://imgix.ranker.com/user_node_img/112/2221416/original/the-slave-ship-photo-u1?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=375");
+INSERT INTO `product` (`id`, `bought`, `style`, `artist`, `prod name`, `price`, `image url`) VALUES
+(0, 'no', 'romantic', 'Ivan Aivazovsky', 'The Ninth Wave', '$101.00', 0x68747470733a2f2f696d6769782e72616e6b65722e636f6d2f757365725f6e6f64655f696d672f323233312f34343631363735332f6f726967696e616c2f7468652d6e696e74682d776176652d70686f746f2d75313f6175746f3d666f726d617426713d3630266669743d63726f7026666d3d706a7067266470723d3226773d323030),
+(1, 'no', 'romantic', 'Ivan Aivazovsky', 'The Ninth Wave', '$101.00', 0x68747470733a2f2f696d6769782e72616e6b65722e636f6d2f757365725f6e6f64655f696d672f323233312f34343631363735332f6f726967696e616c2f7468652d6e696e74682d776176652d70686f746f2d75313f6175746f3d666f726d617426713d3630266669743d63726f7026666d3d706a7067266470723d3226773d333735),
+(2, 'no', 'victorian', 'John William Waterhouse', 'The Lady of Shalott', '$129.00', 0x68747470733a2f2f696d6769782e72616e6b65722e636f6d2f757365725f6e6f64655f696d672f3437352f393439343037342f6f726967696e616c2f7468652d6c6164792d6f662d7368616c6f74742d70686f746f2d75333f6175746f3d666f726d617426713d3630266669743d63726f7026666d3d706a7067266470723d3226773d333735),
+(3, 'no', 'impressionism', 'Pierre-Auguste Renoir', 'Dance at Le Moulin de la Galette', '$376.99', 0x68747470733a2f2f696d6769782e72616e6b65722e636f6d2f757365725f6e6f64655f696d672f32372f3533363930382f6f726967696e616c2f62616c2d61752d6d6f756c696e2d64652d6c612d67616c657474652d6d6f6e746d61727472652d70686f746f2d75323f6175746f3d666f726d617426713d3630266669743d63726f7026666d3d706a7067266470723d3226773d333735),
+(4, 'no', ' edo', 'Hokusai', 'The Great Wave off Kanagawa', '$152.89', 0x68747470733a2f2f696d6769782e72616e6b65722e636f6d2f757365725f6e6f64655f696d672f313639382f33333935323633302f6f726967696e616c2f7468652d67726561742d776176652d6f66662d6b616e61676177612d70686f746f2d75323f6175746f3d666f726d617426713d3630266669743d63726f7026666d3d706a7067266470723d3226773d333735),
+(5, 'no', 'renaissance', 'Hieronymus Bosch', 'The Garden of Earthly Delights', '$738.89', 0x68747470733a2f2f696d6769782e72616e6b65722e636f6d2f757365725f6e6f64655f696d672f3131302f323139343138302f6f726967696e616c2f7468652d67617264656e2d6f662d65617274686c792d64656c69676874732d70686f746f2d75353f6175746f3d666f726d617426713d3630266669743d63726f7026666d3d706a7067266470723d3226773d333735),
+(6, 'no', 'realism', 'Jean-François Millet', 'The Gleaners', '$927.99', 0x68747470733a2f2f696d6769782e72616e6b65722e636f6d2f757365725f6e6f64655f696d672f3539372f31313933363337392f6f726967696e616c2f7468652d676c65616e6572732d70686f746f2d75313f6175746f3d666f726d617426713d3630266669743d63726f7026666d3d706a7067266470723d3226773d333735),
+(7, 'no', 'impressionism', 'Pierre-Auguste Renoir', 'Luncheon of the Boating Party', '$111.11', 0x68747470733a2f2f696d6769782e72616e6b65722e636f6d2f757365725f6e6f64655f696d672f37352f313438373535332f6f726967696e616c2f6c756e6368656f6e2d6f662d7468652d626f6174696e672d70617274792d70686f746f2d75313f6175746f3d666f726d617426713d3630266669743d63726f7026666d3d706a7067266470723d3226773d333735),
+(8, 'no', 'impressionism', 'Georges-Pierre Seurat', 'Sunday Afternoon on the Island of La Grande Jatte', '$321.00', 0x68747470733a2f2f696d6769782e72616e6b65722e636f6d2f757365725f6e6f64655f696d672f3130372f323132313431322f6f726967696e616c2f73756e6461792d61667465726e6f6f6e2d6f6e2d7468652d69736c616e642d6f662d6c612d6772616e64652d6a617474652d70686f746f2d75333f6175746f3d666f726d617426713d3630266669743d63726f7026666d3d706a7067266470723d3226773d333735),
+(9, 'no', 'impressionism', 'Gustave Caillebotte', 'Paris Street; Rainy Day', '$224.99', 0x68747470733a2f2f696d6769782e72616e6b65722e636f6d2f757365725f6e6f64655f696d672f38382f313735363531302f6f726967696e616c2f70617269732d7374726565745f2d7261696e792d6461792d70686f746f2d75323f6175746f3d666f726d617426713d3630266669743d63726f7026666d3d706a7067266470723d3226773d333735),
+(10, 'no', 'realism', 'Édouard Manet', 'A Bar at the Folies-Bergère', '$161.00', 0x68747470733a2f2f696d6769782e72616e6b65722e636f6d2f757365725f6e6f64655f696d672f32372f3532313236362f6f726967696e616c2f612d6261722d61742d7468652d666f6c6965732d626572675f72652d70686f746f2d75313f6175746f3d666f726d617426713d3630266669743d63726f7026666d3d706a7067266470723d3226773d333735),
+(11, 'no', 'romantic', 'Théodore Géricault', 'The Raft of the Medusa', '$189.50', 0x68747470733a2f2f696d6769782e72616e6b65722e636f6d2f757365725f6e6f64655f696d672f39342f313836353935382f6f726967696e616c2f7468652d726166742d6f662d7468652d6d65647573612d70686f746f2d75313f6175746f3d666f726d617426713d3630266669743d63726f7026666d3d706a7067266470723d3226773d333735),
+(12, 'no', 'religious', 'Carl Bloch', 'In a Roman Osteria', '$210.00', 0x68747470733a2f2f696d6769782e72616e6b65722e636f6d2f757365725f6e6f64655f696d672f35303039302f313030313738313130372f6f726967696e616c2f696e2d612d726f6d616e2d6f7374657269612d70686f746f2d75323f6175746f3d666f726d617426713d3630266669743d63726f7026666d3d706a7067266470723d3226773d333735),
+(13, 'no', 'romantic', 'Caspar David Friedrich', 'Moonrise Over the Sea', '$843.99', 0x68747470733a2f2f696d6769782e72616e6b65722e636f6d2f757365725f6e6f64655f696d672f3536372f31313333343736382f6f726967696e616c2f6d6f6f6e726973652d6f7665722d7468652d7365612d70686f746f2d75313f6175746f3d666f726d617426713d3630266669743d63726f7026666d3d706a7067266470723d3226773d333735),
+(14, 'no', 'baroque ', 'Rembrandt', 'The Anatomy Lesson of Dr. Nicolaes Tulp', '$721.25', 0x68747470733a2f2f696d6769782e72616e6b65722e636f6d2f757365725f6e6f64655f696d672f32332f3435353138302f6f726967696e616c2f616e61746f6d792d6c6573736f6e2d6f662d64722d6e69636f6c6165732d74756c702d70686f746f2d75313f6175746f3d666f726d617426713d3630266669743d63726f7026666d3d706a7067266470723d3226773d333735),
+(15, 'no', 'romantic', 'J. M. W. Turner', 'The Fighting Temeraire', '$666.66', 0x68747470733a2f2f696d6769782e72616e6b65722e636f6d2f757365725f6e6f64655f696d672f3131302f323139323032392f6f726967696e616c2f7468652d6669676874696e672d74656d6572616972652d70686f746f2d75313f6175746f3d666f726d617426713d3630266669743d63726f7026666d3d706a7067266470723d3226773d333735),
+(16, 'no', 'romantic', 'Emanuel Leutze', 'Washington Crossing the Delaware', '$102.50', 0x68747470733a2f2f696d6769782e72616e6b65722e636f6d2f757365725f6e6f64655f696d672f3131392f323336323238362f6f726967696e616c2f77617368696e67746f6e2d63726f7373696e672d7468652d64656c61776172652d70686f746f2d75323f6175746f3d666f726d617426713d3630266669743d63726f7026666d3d706a7067266470723d3226773d333735),
+(17, 'no', 'renaissance', 'Leonardo Da Vinci', 'Salvator Mundi', '$510.01', 0x68747470733a2f2f696d6769782e72616e6b65722e636f6d2f757365725f6e6f64655f696d672f3131322f323232353437382f6f726967696e616c2f7468652d74686972642d6f662d6d61792d313830382d70686f746f2d75313f6175746f3d666f726d617426713d3630266669743d63726f7026666d3d706a7067266470723d3226773d333735),
+(18, 'no', 'impressionism', 'Vincent van Gogh', 'The Night Café', '$402.50', 0x68747470733a2f2f696d6769782e72616e6b65722e636f6d2f757365725f6e6f64655f696d672f3131312f323231303432302f6f726967696e616c2f7468652d6e696768742d6361665f2d70686f746f2d75313f6175746f3d666f726d617426713d3630266669743d63726f7026666d3d706a7067266470723d3226773d333735),
+(19, 'no', 'realism', 'Winslow Homer', 'Breezing Up', '$891.00', 0x68747470733a2f2f696d6769782e72616e6b65722e636f6d2f757365725f6e6f64655f696d672f313131342f32323237393139332f6f726967696e616c2f627265657a696e672d75702d70686f746f2d75323f6175746f3d666f726d617426713d3630266669743d63726f7026666d3d706a7067266470723d3226773d333735),
+(20, 'no', 'romantic', 'J. M. W. Turner', 'The Slave Ship', '$399.99', 0x68747470733a2f2f696d6769782e72616e6b65722e636f6d2f757365725f6e6f64655f696d672f3131322f323232313431362f6f726967696e616c2f7468652d736c6176652d736869702d70686f746f2d75313f6175746f3d666f726d617426713d3630266669743d63726f7026666d3d706a7067266470723d3226773d333735);
 
 -- --------------------------------------------------------
 
@@ -171,7 +127,7 @@ INSERT INTO `shipping deets` (`id`, `trackingnum`, `ETA`) VALUES
 --
 
 CREATE TABLE `users` (
-  `id` int(10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `id` int(10) NOT NULL,
   `username` varchar(200) NOT NULL,
   `email` varchar(200) NOT NULL,
   `card` varchar(200) DEFAULT NULL,
@@ -200,18 +156,6 @@ INSERT INTO `users` (`id`, `username`, `email`, `card`, `cvv`, `expiry`, `passwo
 --
 
 --
--- Indexes for table `category`
---
-ALTER TABLE `category`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `country`
---
-ALTER TABLE `country`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `distributer`
 --
 ALTER TABLE `distributer`
@@ -232,29 +176,16 @@ ALTER TABLE `shipping deets`
 --
 -- Indexes for table `users`
 --
--- ALTER TABLE `users`
---   ADD PRIMARY KEY (`id`),
---   ADD UNIQUE KEY `email` (`email`);
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT for table `category`
---
-ALTER TABLE `category`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
-
---
--- AUTO_INCREMENT for table `country`
---
-ALTER TABLE `country`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
-
---
 -- AUTO_INCREMENT for table `distributer`
-
+--
 ALTER TABLE `distributer`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
@@ -270,12 +201,12 @@ ALTER TABLE `product`
 ALTER TABLE `shipping deets`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
--- --
--- -- AUTO_INCREMENT for table `users`
--- --
--- ALTER TABLE `users`
---   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
--- COMMIT;
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

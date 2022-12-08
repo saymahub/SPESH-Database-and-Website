@@ -54,7 +54,7 @@
         <form action="Cart.php" method="post">
                     <div>
                         <br></br>
-                        <label>OR</label>
+
                         <br></br>
                         <label>Selection 1:</label>
                         <input type="text" name="selection1"/>
@@ -67,15 +67,15 @@
                 </form>
         <?php
 			$artistFlag = 0;
-			$eraFlag = 0;
+			$styleFlag = 0;
 			if($_POST["artist"] != null){
 				$artist= $_POST["artist"];
 				$artistFlag = 1;
 			}
 			
-			else if ($_POST["era"] != null){
-				$era = $_POST["era"];
-				$eraFlag = 1;
+			else if ($_POST["style"] != null){
+				$style = $_POST["style"];
+				$styleFlag = 1;
 			}
 			
             // Username is root
@@ -105,8 +105,7 @@
             $myvariable = 0;
             $prod_id = 0;
             $prod_name = [];
-            $prod_country = [];
-            $prod_era = [];
+            $prod_style = [];
             $prod_price = [];
             $prod_img = [];
             $prod_artist = [];
@@ -114,8 +113,7 @@
             while($prod_row = mysqli_fetch_array($query)){
                 $prod_id = $prod_row['id'];
                 $prod_name[$myvariable] = $prod_row['prod name'];
-                $prod_country[$myvariable] = $prod_row['country'];
-                $prod_era[$myvariable] = $prod_row['era'];
+                $prod_style[$myvariable] = $prod_row['style'];
                 $prod_price[$myvariable] = $prod_row['price'];
                 $prod_img[$myvariable] = $prod_row['image url'];
                 $prod_artist[$myvariable] = $prod_row['artist'];
@@ -130,7 +128,7 @@
 					?>
 				
 					<p style = "color: #6A475A;position:relative; font-size:30px; left: 300px; top: 90px;" class = "adjust-line-height"> 
-						<strong> <?php echo $counter ?></strong><strong> <?php echo $prod_name[$myvariable] ?></strong>
+						<strong> <?php echo $prod_id ?></strong><strong> <?php echo $prod_name[$myvariable] ?></strong>
 					</p>
 					<img src= "<?php echo $prod_img[$myvariable] ?>" alt="test"
 						style = "width:200px; position:relative; left:60px; top: 30px;">
@@ -141,9 +139,9 @@
 						<strong> <?php echo $prod_price[$myvariable] ?></strong>
 					</p>
 
-					<p style = "color: #6A475A; position:relative; font-size:18px; left:300px; top: -70px;"  class = "adjust-line-height"> 
+					<!-- <p style = "color: #6A475A; position:relative; font-size:18px; left:300px; top: -70px;"  class = "adjust-line-height"> 
 						<strong> "<?php echo $prod_country[$myvariable] ?>"</strong>
-					</p>
+					</p> -->
 
 					<p style = "color: #6A475A; position:relative; font-size:18px; left:300px; top: -70px;"  class = "adjust-line-height"> 
 						<strong> "<?php echo $prod_artist[$myvariable] ?>"</strong>
@@ -155,12 +153,12 @@
 					}
 				}
 
-				else if($eraFlag == 1){
-					if($prod_era[$myvariable] == $era && $_POST["era"] != null){
+				else if($styleFlag == 1){
+					if($prod_style[$myvariable] == $style && $_POST["style"] != null){
 					?>
 				
 					<p style = "color: #6A475A;position:relative; font-size:30px; left: 300px; top: 90px;" class = "adjust-line-height"> 
-						<strong> <?php echo $counter ?></strong><strong> <?php echo $prod_name[$myvariable] ?></strong>
+						<strong> <?php echo $prod_id ?></strong><strong> <?php echo $prod_name[$myvariable] ?></strong>
 					</p>
 					<img src= "<?php echo $prod_img[$myvariable] ?>" alt="test"
 						style = "width:200px; position:relative; left:60px; top: 30px;">
@@ -171,9 +169,9 @@
 						<strong> <?php echo $prod_price[$myvariable] ?></strong>
 					</p>
 
-					<p style = "color: #6A475A; position:relative; font-size:18px; left:300px; top: -70px;"  class = "adjust-line-height"> 
+					<!-- <p style = "color: #6A475A; position:relative; font-size:18px; left:300px; top: -70px;"  class = "adjust-line-height"> 
 						<strong> "<?php echo $prod_country[$myvariable] ?>"</strong>
-					</p>
+					</p> -->
 
 					<p style = "color: #6A475A; position:relative; font-size:18px; left:300px; top: -70px;"  class = "adjust-line-height"> 
 						<strong> "<?php echo $prod_artist[$myvariable] ?>"</strong>

@@ -83,7 +83,7 @@
             $prod_id = 0;
             $prod_name = [];
             $prod_country = [];
-            $prod_era = [];
+            $prod_style = [];
             $prod_price = [];
             $prod_img = [];
             $prod_artist = [];
@@ -91,8 +91,7 @@
             while($prod_row = mysqli_fetch_array($query)){
                 $prod_id = $prod_row['id'];
                 $prod_name[$myvariable] = $prod_row['prod name'];
-                $prod_country[$myvariable] = $prod_row['country'];
-                $prod_era[$myvariable] = $prod_row['era'];
+                $prod_style[$myvariable] = $prod_row['style'];
                 $prod_price[$myvariable] = $prod_row['price'];
                 $prod_img[$myvariable] = $prod_row['image url'];
                 $prod_artist[$myvariable] = $prod_row['artist'];
@@ -110,8 +109,12 @@
             // }
 
             $uniqArtist = array_unique($prod_artist);
+            $uniqArtist = array_filter($uniqArtist);
+            $uniqArtist = array_values($uniqArtist);
           
-            $uniqEra = array_unique($prod_era);
+            $uniqStyle = array_unique($prod_style);
+            $uniqStyle = array_filter($uniqStyle);
+            $uniqStyle = array_values($uniqStyle);
             
             
            
@@ -127,9 +130,7 @@
             ?>
             <br></br>
             <?php
-            if($iter == 5){
-                $iter = $iter + 2;
-            }
+          
             
             $iter ++;
             }
@@ -137,26 +138,30 @@
     
         </div>
         <div class="column">
-        <h2>Era:</h2>
+        <h2>Style:</h2>
         <?php
+
             $iter = 0;
-            while($iter < sizeof($uniqEra)){
-            echo $uniqEra[$iter];
+            while($iter < sizeof($uniqStyle)){
+            echo $uniqStyle[$iter];
             ?>
             <br></br>
             <?php
-            if($iter == 0 ){
-                $iter = $iter + 2;
-            }
+            // if($iter == 6 || $iter == 7 || $iter == 8 || $iter == 9 || $iter == 10 || $iter == 12){
+            //     $iter = $iter + 2;
+            // }
+
             
             $iter ++;
             }
             ?>
             <?php
-            echo "chips"
+            
         ?>
         </div>
         </div>
+        <br></br>
+        <br></br>
         <br></br>
         <br></br>
         <br></br>
@@ -175,8 +180,8 @@
             <br></br>
             <input type="submit" value="Confirm Search" />
             <br></br>
-            <label>Search By Era:</label>
-			<input type="text" name="era"/>
+            <label>Search By Style:</label>
+			<input type="text" name="style"/>
             <br></br>
             <input type="submit" value="Confirm Search" />
         </form>
@@ -222,7 +227,7 @@
             $myvariable = 0;
             $prod_id = 0;
             $prod_name = [];
-            $prod_country = [];
+            $prod_style = [];
             $prod_price = [];
             $prod_img = [];
             $prod_artist = [];
@@ -230,7 +235,7 @@
             while($prod_row = mysqli_fetch_array($query)){
                 $prod_id = $prod_row['id'];
                 $prod_name[$myvariable] = $prod_row['prod name'];
-                $prod_country[$myvariable] = $prod_row['country'];
+                $prod_style[$myvariable] = $prod_row['style'];
                 $prod_price[$myvariable] = $prod_row['price'];
                 $prod_img[$myvariable] = $prod_row['image url'];
                 $prod_artist[$myvariable] = $prod_row['artist'];
