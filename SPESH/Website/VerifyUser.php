@@ -70,9 +70,10 @@
 <body style=>
 	<h1 style="color: #451C29; font-size:60px; text-align:center;">SPESH Market! </h1>
 	
-	<h2 style="color: #451C29; font-size:30px; text-align:center;" >Contact us now to be reviewed and have a chance to be part of SPESH.</h2>
+	<h2 style="color: #451C29; font-size:30px; text-align:center;" >Hmm, looks like we can't find your account :/</h2>
 
 	<h2 style="color: #451C29; font-size:20px; text-align:center;" >Enter your details wrong? Just go back and try again.</h2>
+    <h2 style="color: #451C29; font-size:20px; text-align:center;" >Want to be part of the SPESH team? Shoot us an email!</h2>
     <h2 style="color: #451C29; font-size:15px; text-align:center;" >spesh@spesh.com</h2>
 
     <a href="Login.php"><input type="button" value="Back" style="float: left;"></a>
