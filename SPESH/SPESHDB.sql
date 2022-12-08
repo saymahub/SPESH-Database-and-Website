@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 08, 2022 at 06:08 AM
+-- Generation Time: Dec 08, 2022 at 06:34 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -97,28 +97,23 @@ INSERT INTO `product` (`id`, `bought`, `style`, `artist`, `prod name`, `price`, 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `shipping deets`
+-- Table structure for table `shipping_deets`
 --
 
-CREATE TABLE `shipping deets` (
+CREATE TABLE `shipping_deets` (
   `id` int(10) NOT NULL,
-  `trackingnum` varchar(200) NOT NULL,
   `ETA` varchar(200) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `shipping deets`
+-- Dumping data for table `shipping_deets`
 --
 
-INSERT INTO `shipping deets` (`id`, `trackingnum`, `ETA`) VALUES
-(1, '3200066534', 'Decemeber 5th, 2022'),
-(2, '3264366534', 'Decemeber 5th, 2022'),
-(3, '3200364534', 'Decemeber 5th, 2022'),
-(4, '3264366534', 'Decemeber 5th, 2022'),
-(5, '3264300034', 'Decemeber 5th, 2022'),
-(6, '3264836534', 'Decemeber 5th, 2022'),
-(7, '3264366534', 'Decemeber 5th, 2022'),
-(8, '3200066534', 'Decemeber 5th, 2022');
+INSERT INTO `shipping_deets` (`id`, `ETA`) VALUES
+(1, '10/19/2023'),
+(2, '9/21/2025'),
+(3, '10/19/2025'),
+(4, '9/27/2025');
 
 -- --------------------------------------------------------
 
@@ -168,9 +163,9 @@ ALTER TABLE `product`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `shipping deets`
+-- Indexes for table `shipping_deets`
 --
-ALTER TABLE `shipping deets`
+ALTER TABLE `shipping_deets`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -196,10 +191,10 @@ ALTER TABLE `product`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
--- AUTO_INCREMENT for table `shipping deets`
+-- AUTO_INCREMENT for table `shipping_deets`
 --
-ALTER TABLE `shipping deets`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+ALTER TABLE `shipping_deets`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `users`
