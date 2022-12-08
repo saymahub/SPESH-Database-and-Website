@@ -30,6 +30,32 @@
         clear: both;
     }
 
+    * {
+    box-sizing: border-box;
+    }
+
+    /* Create four equal columns that floats next to each other */
+    .column {
+    float: left;
+    width: 25%;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    }
+
+    /* Responsive layout - makes the four columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+    }
+
 </style> 
 <meta charset="ISO-8859-1">
 <title>Login Page</title>
@@ -39,8 +65,7 @@
 	<h1 style="color: #451C29; font-size:60px; text-align:center;">SPESH Market! </h1>
 	
 	<h2 style="color: #451C29; font-size:30px; text-align:center;" >Distributor Info</h2>
-  <a href="Login.php"><input type="button" value="Back" style="float: left; ;position:relative; top: -60px;"></a>
-  <?php
+   <?php
             // Username is root
             $user = 'root';
             $password = '';
@@ -74,6 +99,10 @@
             $phone = [];
             $image = [];
             $counter = 1;
+            ?>
+                <div class="row">
+            <?php
+            $space = 1;
             while($prod_row = mysqli_fetch_array($query)){
                 $prod_id = $prod_row['id'];
                 $first_name[$myvariable] = $prod_row['first name'];
@@ -86,22 +115,23 @@
                 //echo $precio_digital;
                 ?>
 
-                <div class="row">
                 <div class="column">
                     <h2 style="color: #4F2E38;"><?php echo $first_name[$myvariable] ?> <?php echo " " ?> <?php echo $last_name[$myvariable] ?></h2>
                     <p><?php echo $email[$myvariable] ?></p>
-                    <p><?php echo $phone[$myvariable] ?></p></p>
+                    <p><?php echo $phone[$myvariable] ?></p>
                     <img src="https://upload.wikimedia.org/wikipedia/en/d/da/Matt_LeBlanc_as_Joey_Tribbiani.jpg" width="150" height ="150" class="center"{margin-right: 30%}>
                     <br></br>
                     <a href="ContactDistributor.php"><input type="button" value="Contact" style="float: left;"></a>
                 </div>
-                </div>
-            
-                <br></br>
-                <br></br>
+
+                <br> </br>
                 <?php
                             $counter = $counter + 1;
             }
+            
+            ?>
+                </div>
+            <?php
             
 
             
