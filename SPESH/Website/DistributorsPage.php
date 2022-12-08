@@ -115,7 +115,7 @@
                 <h2 style="color: #4F2E38;"><?php echo $first_name[$myvariable] ?> <?php echo " " ?> <?php echo $last_name[$myvariable] ?></h2>
                 <p><?php echo $email[$myvariable] ?></p>
                 <p><?php echo $phone[$myvariable] ?></p>
-                <img src="<?php echo $image[$myvariable] ?>" height="120" class="center"{margin-right: 30%}>
+                <img src="<?php echo $image[$myvariable] ?>" height="130" class="center"{margin-right: 30%}>
                 <br></br>
                 <a href="ContactDistributor.php"><input type="button" value="Contact" style="float: left;"></a>
             
