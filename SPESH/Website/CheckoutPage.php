@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>SPESH! 
-    <body>
-    <title>Item</title>
+    <title>Checkout</title>
 		<h1 style="color: #451C29; font-size:60px; text-align:center;">SPESH Market! </h1>
 		
     <style>
@@ -81,14 +79,10 @@
         </body>
         </html>
         
-        <?php echo " Enter differemt payment and shipping information or use default information";
+        <?php echo " Enter different payment and shipping information or use default information";
         ?>
         <br>
         <br>
-        <form action="#" method="post">
-            <input type="checkbox" name="default" value="Use default">Use default</input>            
-        </form>
-
         
         <form action="ConfirmationPage.php" method="post">
 
