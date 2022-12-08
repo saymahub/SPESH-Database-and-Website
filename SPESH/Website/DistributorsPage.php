@@ -108,7 +108,6 @@
                 $first_name[$myvariable] = $prod_row['first name'];
                 $last_name[$myvariable] = $prod_row['last name'];
                 $email[$myvariable] = $prod_row['email'];
-                $prod_img[$myvariable] = $prod_row['country'];
                 $phone[$myvariable] = $prod_row['phone'];
                 $image[$myvariable] = $prod_row['image'];
 
@@ -119,11 +118,12 @@
                     <h2 style="color: #4F2E38;"><?php echo $first_name[$myvariable] ?> <?php echo " " ?> <?php echo $last_name[$myvariable] ?></h2>
                     <p><?php echo $email[$myvariable] ?></p>
                     <p><?php echo $phone[$myvariable] ?></p>
-                    <img src="https://upload.wikimedia.org/wikipedia/en/d/da/Matt_LeBlanc_as_Joey_Tribbiani.jpg" width="150" height ="150" class="center"{margin-right: 30%}>
+                    <img src="<?php echo $image[$myvariable] ?>" height="200" class="center"{margin-right: 30%}>
                     <br></br>
                     <a href="ContactDistributor.php"><input type="button" value="Contact" style="float: left;"></a>
                 </div>
 
+                <br> </br>
                 <br> </br>
                 <?php
                             $counter = $counter + 1;

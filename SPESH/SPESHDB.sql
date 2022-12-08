@@ -42,14 +42,15 @@ CREATE TABLE `distributer` (
 --
 
 INSERT INTO `distributer` (`id`, `first name`, `last name`, `email`, `country`, `phone`, `image`) VALUES
+(0, 'Phil', 'Simpson', 'phil@distrib.ca', 'Japan', '184 758 3920', 'https://upload.wikimedia.org/wikipedia/en/d/da/Matt_LeBlanc_as_Joey_Tribbiani.jpg'),
 (1, 'Phil', 'Simpson', 'phil@distrib.ca', 'Japan', '184 758 3920', 'https://upload.wikimedia.org/wikipedia/en/d/da/Matt_LeBlanc_as_Joey_Tribbiani.jpg'),
-(2, 'Jasmeender', 'Simpson', 'Jasmeender@distrib.ca', 'Japan', '264 901 7284', 'https://upload.wikimedia.org/wikipedia/en/d/da/Matt_LeBlanc_as_Joey_Tribbiani.jpg'),
-(3, 'Siwon', 'Choi', 'Siwon@distrib.ca', 'Japan', '740 154 9174', 'https://upload.wikimedia.org/wikipedia/en/d/da/Matt_LeBlanc_as_Joey_Tribbiani.jpg'),
-(4, 'George', 'Simpson', 'george@distrib.ca', 'Japan', '910 274 8394', 'https://upload.wikimedia.org/wikipedia/en/d/da/Matt_LeBlanc_as_Joey_Tribbiani.jpg'),
-(5, 'Daniel', 'Simpson', 'daniel@distrib.ca', 'Japan', '672 839 0940', 'https://upload.wikimedia.org/wikipedia/en/d/da/Matt_LeBlanc_as_Joey_Tribbiani.jpg'),
-(6, 'Sangeet', 'Paramjeet', 'sangeet@distrib.ca', 'Japan', '567 890 2345', 'https://upload.wikimedia.org/wikipedia/en/d/da/Matt_LeBlanc_as_Joey_Tribbiani.jpg'),
-(7, 'Barthalomew', 'Simpson', 'Barthalomew@distrib.ca', 'Japan', '876 498 3900', 'https://upload.wikimedia.org/wikipedia/en/d/da/Matt_LeBlanc_as_Joey_Tribbiani.jpg'),
-(8, 'Putin', 'Simpson', 'putin@distrib.ca', 'Japan', '536 738 3988', 'https://upload.wikimedia.org/wikipedia/en/d/da/Matt_LeBlanc_as_Joey_Tribbiani.jpg');
+(2, 'Jasmeender', 'Simpson', 'Jasmeender@distrib.ca', 'Japan', '264 901 7284', 'https://m.media-amazon.com/images/M/MV5BMTM3NjcyODE1Nl5BMl5BanBnXkFtZTYwMjE1ODU3._V1_.jpg'),
+(3, 'Siwon', 'Choi', 'Siwon@distrib.ca', 'Japan', '740 154 9174', 'https://i.pinimg.com/originals/32/cb/60/32cb600629bfdad9cbe5f138a67dc7d3.jpg'),
+(4, 'George', 'Simpson', 'george@distrib.ca', 'Japan', '910 274 8394', 'https://i.pinimg.com/736x/a3/e1/56/a3e156bd4a2227ecbde97c6907e20a02.jpg'),
+(5, 'Daniel', 'Simpson', 'daniel@distrib.ca', 'Japan', '672 839 0940', 'https://www.cs.colostate.edu/workshop/Students/hawkinsh/joey001.jpg'),
+(6, 'Troy', 'Bolton', 'sangeet@distrib.ca', 'Japan', '567 890 2345', 'https://fotografias.antena3.com/clipping/cmsimages01/2018/10/18/226A74E0-C67D-40BA-BD22-9EE8E9909F51/69.jpg?crop=1:1,smart&width=1200&height=1200&optimize=low&format=webply'),
+(7, 'Barthalomew', 'Simpson', 'Barthalomew@distrib.ca', 'Japan', '876 498 3900', 'https://todofriends.com/wp-content/uploads/2021/03/Joey-833x1024.jpg'),
+(8, 'Putin', 'Simpson', 'putin@distrib.ca', 'Japan', '536 738 3988', 'https://i.guim.co.uk/img/media/513976d50736695ee8bd5014175e007f9980531f/0_289_2980_1788/master/2980.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=77863ec7b2622437668af3ff9ecd7ae6');
 
 -- --------------------------------------------------------
 
