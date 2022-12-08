@@ -103,7 +103,6 @@ INSERT INTO `distributer` (`id`, `first name`, `last name`, `email`, `country`, 
 
 CREATE TABLE `product` (
   `id` int(10) NOT NULL,
-  `country` varchar(200) NOT NULL,
   `bought` varchar(200) NOT NULL,
   `era` varchar(200) NOT NULL,
   `artist` varchar(200) NOT NULL,
