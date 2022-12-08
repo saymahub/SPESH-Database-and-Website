@@ -87,7 +87,7 @@ CREATE TABLE `distributer` (
 
 INSERT INTO `distributer` (`id`, `first name`, `last name`, `email`, `country`, `phone`,`image`) VALUES
 (1, 'Phil', 'Simpson', 'phil@distrib.ca', 'Japan', '184 758 3920', 'https://upload.wikimedia.org/wikipedia/en/d/da/Matt_LeBlanc_as_Joey_Tribbiani.jpg'),
-(2, 'Jasmeender', 'Simpson', 'Jasmeender@distrib.ca', 'Japan', '264 901 7284', 'https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.easterneye.biz/wp-content/uploads/2022/03/LEAD-1-Jasminder-Singh-profile-Radisson2-scaled.jpg'),
+(2, 'Jasmeender', 'Simpson', 'Jasmeender@distrib.ca', 'Japan', '264 901 7284', 'https://upload.wikimedia.org/wikipedia/en/d/da/Matt_LeBlanc_as_Joey_Tribbiani.jpg'),
 (3, 'Siwon', 'Choi', 'Siwon@distrib.ca', 'Japan', '740 154 9174', 'https://upload.wikimedia.org/wikipedia/en/d/da/Matt_LeBlanc_as_Joey_Tribbiani.jpg'),
 (4, 'George', 'Simpson', 'george@distrib.ca', 'Japan', '910 274 8394', 'https://upload.wikimedia.org/wikipedia/en/d/da/Matt_LeBlanc_as_Joey_Tribbiani.jpg'),
 (5, 'Daniel', 'Simpson', 'daniel@distrib.ca', 'Japan', '672 839 0940', 'https://upload.wikimedia.org/wikipedia/en/d/da/Matt_LeBlanc_as_Joey_Tribbiani.jpg'),
