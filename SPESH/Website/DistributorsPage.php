@@ -18,7 +18,7 @@
     /* Create four equal columns that floats next to each other */
     .column {
         float: left;
-        /* width: 25%; */
+        width: 25%;
         padding: 10px;
         /* height: 300px; Should be removed. Only for demonstration */
     }
@@ -72,6 +72,7 @@
             $email = [];
             $country = [];
             $phone = [];
+            $image = [];
             $counter = 1;
             while($prod_row = mysqli_fetch_array($query)){
                 $prod_id = $prod_row['id'];
@@ -80,24 +81,26 @@
                 $email[$myvariable] = $prod_row['email'];
                 $prod_img[$myvariable] = $prod_row['country'];
                 $phone[$myvariable] = $prod_row['phone'];
+                $image[$myvariable] = $prod_row['image'];
 
                 //echo $precio_digital;
                 ?>
 
-    
-      <div class="column">
-        <h2 style="color: #4F2E38;"><?php echo $first_name[$myvariable] ?> <?php echo " " ?> <?php echo $last_name[$myvariable] ?></h2>
-        <p><?php echo $email[$myvariable] ?></p>
-        <p><?php echo $phone[$myvariable] ?></p></p>
-        <img src="https://upload.wikimedia.org/wikipedia/en/d/da/Matt_LeBlanc_as_Joey_Tribbiani.jpg" width="150" height ="150" class="center"{margin-right: 30%}>
-        <br></br>
-        <a href="ContactDistributor.php"><input type="button" value="Contact" style="float: left;"></a>
-      </div>
-  
-    <br></br>
-    <br></br>
-    <?php
-                $counter = $counter + 1;
+                <div class="row">
+                <div class="column">
+                    <h2 style="color: #4F2E38;"><?php echo $first_name[$myvariable] ?> <?php echo " " ?> <?php echo $last_name[$myvariable] ?></h2>
+                    <p><?php echo $email[$myvariable] ?></p>
+                    <p><?php echo $phone[$myvariable] ?></p></p>
+                    <img src="https://upload.wikimedia.org/wikipedia/en/d/da/Matt_LeBlanc_as_Joey_Tribbiani.jpg" width="150" height ="150" class="center"{margin-right: 30%}>
+                    <br></br>
+                    <a href="ContactDistributor.php"><input type="button" value="Contact" style="float: left;"></a>
+                </div>
+                </div>
+            
+                <br></br>
+                <br></br>
+                <?php
+                            $counter = $counter + 1;
             }
             
 

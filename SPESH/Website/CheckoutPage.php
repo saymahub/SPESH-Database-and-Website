@@ -107,23 +107,11 @@
                 <input type="text" />
             </div>
             <div>
-                <label>Country:</label>
-                <input type="text" />
-            </div>
-            <div>
-                <label>Province:</label>
-                <input type="text" />
-            </div>
-            <div>
-                <label>City:</label>
-                <input type="text" />
-            </div>
-            <div>
                 <label>Address:</label>
                 <input type="text" />
             </div>
             <div>
-            <label>Postal Code:</label>
+            <label>Email:</label>
                 <input type="text" />
                 <br>
                 <br>

@@ -77,22 +77,23 @@ CREATE TABLE `distributer` (
   `last name` varchar(200) NOT NULL,
   `email` varchar(200) NOT NULL,
   `country` varchar(200) NOT NULL,
-  `phone` varchar(200) DEFAULT NULL
+  `phone` varchar(200) DEFAULT NULL,
+  `image` varchar(200) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `distributer`
 --
 
-INSERT INTO `distributer` (`id`, `first name`, `last name`, `email`, `country`, `phone`) VALUES
-(1, 'Phil', 'Simpson', 'phil@distrib.ca', 'Japan', '184 758 3920'),
-(2, 'Jasmeender', 'Simpson', 'Jasmeender@distrib.ca', 'Japan', '264 901 7284'),
-(3, 'Siwon', 'Choi', 'Siwon@distrib.ca', 'Japan', '740 154 9174'),
-(4, 'George', 'Simpson', 'george@distrib.ca', 'Japan', '910 274 8394'),
-(5, 'Daniel', 'Simpson', 'daniel@distrib.ca', 'Japan', '672 839 0940'),
-(6, 'Sangeet', 'Paramjeet', 'sangeet@distrib.ca', 'Japan', '567 890 2345'),
-(7, 'Barthalomew', 'Simpson', 'Barthalomew@distrib.ca', 'Japan', '876 498 3900'),
-(8, 'Putin', 'Simpson', 'putin@distrib.ca', 'Japan', '536 738 3988');
+INSERT INTO `distributer` (`id`, `first name`, `last name`, `email`, `country`, `phone`,`image`) VALUES
+(1, 'Phil', 'Simpson', 'phil@distrib.ca', 'Japan', '184 758 3920', 'https://upload.wikimedia.org/wikipedia/en/d/da/Matt_LeBlanc_as_Joey_Tribbiani.jpg'),
+(2, 'Jasmeender', 'Simpson', 'Jasmeender@distrib.ca', 'Japan', '264 901 7284', 'https://upload.wikimedia.org/wikipedia/en/d/da/Matt_LeBlanc_as_Joey_Tribbiani.jpg'),
+(3, 'Siwon', 'Choi', 'Siwon@distrib.ca', 'Japan', '740 154 9174', 'https://upload.wikimedia.org/wikipedia/en/d/da/Matt_LeBlanc_as_Joey_Tribbiani.jpg'),
+(4, 'George', 'Simpson', 'george@distrib.ca', 'Japan', '910 274 8394', 'https://upload.wikimedia.org/wikipedia/en/d/da/Matt_LeBlanc_as_Joey_Tribbiani.jpg'),
+(5, 'Daniel', 'Simpson', 'daniel@distrib.ca', 'Japan', '672 839 0940', 'https://upload.wikimedia.org/wikipedia/en/d/da/Matt_LeBlanc_as_Joey_Tribbiani.jpg'),
+(6, 'Sangeet', 'Paramjeet', 'sangeet@distrib.ca', 'Japan', '567 890 2345', 'https://upload.wikimedia.org/wikipedia/en/d/da/Matt_LeBlanc_as_Joey_Tribbiani.jpg'),
+(7, 'Barthalomew', 'Simpson', 'Barthalomew@distrib.ca', 'Japan', '876 498 3900', 'https://upload.wikimedia.org/wikipedia/en/d/da/Matt_LeBlanc_as_Joey_Tribbiani.jpg'),
+(8, 'Putin', 'Simpson', 'putin@distrib.ca', 'Japan', '536 738 3988', 'https://upload.wikimedia.org/wikipedia/en/d/da/Matt_LeBlanc_as_Joey_Tribbiani.jpg');
 
 -- --------------------------------------------------------
 
